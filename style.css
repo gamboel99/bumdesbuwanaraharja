@@ -1,106 +1,127 @@
+/* Reset dan dasar */
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f8fff4;
+  margin: 0;
+  padding: 0;
+  background-color: #f5fff5;
   color: #333;
 }
 
-.header {
+/* Header */
+header {
+  background: linear-gradient(to right, #006400, #00cc00);
+  color: white;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #006400, #90ee90);
-  padding: 10px 20px;
-  border-bottom: 4px solid red;
+  border-bottom: 5px solid #ffd700; /* kuning */
 }
 
-.logo {
-  width: 80px;
-  height: auto;
+header img {
+  height: 60px;
+  width: auto;
+  margin: 0 10px;
 }
 
-.judul {
+header h1 {
+  flex: 1;
   text-align: center;
-  color: white;
-}
-
-.judul h1 {
+  font-size: 1.8rem;
   margin: 0;
-  font-size: 1.6em;
-}
-
-.judul h2 {
-  margin: 0;
-  font-size: 1em;
-  color: yellow;
 }
 
 /* Navbar */
-.navbar {
+nav {
   background-color: #004d00;
+  border-bottom: 4px solid red;
 }
 
-.menu {
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
 }
 
-.menu li {
+nav li {
   position: relative;
 }
 
-.menu a {
+nav a {
   display: block;
-  padding: 12px 20px;
-  color: white;
+  padding: 0.75rem 1rem;
   text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.menu a:hover {
-  background-color: #009900;
+nav a:hover {
+  background-color: #006400;
+  color: #ffd700; /* kuning */
 }
 
-/* Dropdown */
+/* Dropdown menu */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: white;
-  min-width: 180px;
-  z-index: 1;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 2px solid #006400;
 }
 
 .dropdown-content li a {
   color: #004d00;
+  padding: 0.75rem;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Main Container */
+/* Container/konten utama */
 .container {
-  padding: 20px;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
   background-color: white;
-  border: 3px solid red;
-  margin: 20px auto;
-  max-width: 1000px;
+  border: 2px solid #ccc;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Card/unit */
+.card {
+  border: 2px solid #ff0000; /* merah */
+  border-left: 8px solid #ffd700; /* kuning */
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fffefa;
 }
 
 /* Footer */
-.footer {
+footer {
   background-color: #004d00;
   color: white;
-  padding: 20px;
   text-align: center;
-  border-top: 5px solid yellow;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  border-top: 4px solid #ff0000;
+  font-size: 0.9rem;
 }
 
-.footer p {
-  margin: 5px 0;
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
