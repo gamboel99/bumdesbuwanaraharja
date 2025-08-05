@@ -5,156 +5,205 @@
   box-sizing: border-box;
 }
 
-/* Pola diamond lembut */
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-image: repeating-linear-gradient(
-    45deg,
-    #f9f9f9,
-    #f9f9f9 12px,
-    #e0e0e0 12px,
-    #e0e0e0 24px
-  );
-  background-attachment: fixed;
-  background-size: cover;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4fdf4 url('asset/bg-pattern.png') repeat;
   color: #222;
+  line-height: 1.6;
+}
+
+/* Container utama */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
 /* Header */
-header.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to right, #006400, #00a651);
-  padding: 15px 30px;
-  border-bottom: 4px solid #d00;
-}
-
-header.banner img {
-  height: 60px;
-}
-
-header.banner h1 {
-  flex: 1;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8em;
+.banner {
+  background-color: #006400;
   color: white;
-  text-shadow: 1px 1px 2px #000;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  border-bottom: 4px solid #FFD700;
 }
 
-/* Navigation */
+.banner img.logo-kiri,
+.banner img.logo-kanan {
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+}
+
+.banner img.logo-kiri {
+  left: 20px;
+}
+
+.banner img.logo-kanan {
+  right: 20px;
+}
+
+.banner h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.banner p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Navigasi */
 nav {
-  background: #004d2a;
-  border-bottom: 3px solid #ffd700;
+  background-color: #228B22;
+  border-bottom: 3px solid #FFD700;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 10px 20px;
   justify-content: center;
 }
 
 nav ul li {
   position: relative;
-  margin: 0 15px;
 }
 
 nav ul li a {
-  font-family: 'Playfair Display', serif;
+  display: block;
+  padding: 15px 20px;
   color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-  font-size: 1.1em;
-  transition: background 0.3s ease;
+  font-weight: bold;
 }
 
-nav ul li a:hover {
-  background: #ffd700;
-  color: #000;
-  border-radius: 4px;
+nav ul li:hover {
+  background-color: #006400;
 }
 
-/* Dropdown menu */
-nav ul li ul {
+nav ul li ul.dropdown {
+  display: none;
   position: absolute;
+  background-color: #228B22;
   top: 100%;
   left: 0;
   min-width: 200px;
-  display: none;
-  background: #004d2a;
-  z-index: 999;
-  border: 2px solid #ffd700;
+  z-index: 99;
+  border: 1px solid #FFD700;
 }
 
-nav ul li:hover ul {
+nav ul li:hover ul.dropdown {
   display: block;
 }
 
-nav ul li ul li {
-  margin: 0;
-}
-
-nav ul li ul li a {
+nav ul li ul.dropdown li a {
   padding: 10px;
-  font-size: 1em;
-  color: white;
+  color: #fff;
+  background-color: #228B22;
 }
 
-nav ul li ul li a:hover {
-  background: #ffd700;
-  color: #000;
+nav ul li ul.dropdown li:hover a {
+  background-color: #006400;
 }
 
-/* Main content container */
-.container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
+/* Konten */
+.content {
   background: white;
+  margin: 30px auto;
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  border: 2px solid #ccc;
+  border: 2px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
 }
 
-.container h2 {
-  font-family: 'Playfair Display', serif;
-  color: #004d2a;
-  margin-bottom: 15px;
-  font-size: 1.6em;
+/* Judul Konten */
+.content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #006400;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0fff0;
+}
+
+/* Form */
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #004d00;
 }
 
 /* Footer */
 footer {
-  background: #004d2a;
+  background-color: #004d00;
   color: white;
   padding: 30px 20px;
-  font-size: 0.95em;
+  margin-top: 40px;
+  border-top: 4px solid #FFD700;
+}
+
+footer .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  border-top: 5px solid #d00;
 }
 
 .footer-section {
-  flex: 1 1 200px;
+  flex: 1 1 250px;
 }
 
 .footer-section h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  color: #ffd700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 5px;
 }
 
 .footer-section ul {
   list-style: none;
-  padding-left: 0;
 }
 
 .footer-section ul li {
@@ -170,12 +219,24 @@ footer {
   text-decoration: underline;
 }
 
-.footer-bottom {
-  width: 100%;
+footer .copyright {
   text-align: center;
-  padding-top: 15px;
-  border-top: 1px solid #999;
-  font-size: 0.85em;
-  color: #ccc;
+  margin-top: 20px;
+  font-size: 0.9em;
 }
 
+/* Responsif */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .banner img.logo-kiri,
+  .banner img.logo-kanan {
+    width: 60px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
