@@ -1,4 +1,4 @@
-/* Reset & Umum */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,43 +7,44 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
-  color: #222;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* ======= HEADER ======= */
+/* Banner Header */
 .banner {
-  background-color: #014421; /* Hijau tua */
-  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(to right, #1b5e20, #4caf50);
   padding: 15px 30px;
-  border-bottom: 4px solid #ffd700; /* Kuning */
+  color: #fff;
+  border-bottom: 4px solid #ffc107;
 }
 
 .logo {
-  height: 70px;
+  width: 80px;
+  height: auto;
 }
 
-.banner h1 {
-  flex: 1;
+h1 {
   text-align: center;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 1.8em;
+  flex-grow: 1;
+  color: #fff;
 }
 
-.banner h1 span {
+h1 span {
+  font-size: 0.8em;
   display: block;
-  font-size: 1.2rem;
-  color: #ffcc00; /* Kuning */
+  margin-top: 4px;
 }
 
-/* ======= NAVIGATION ======= */
+/* Navigation */
 nav {
-  background-color: #fff;
-  border-bottom: 4px solid #d40000; /* Merah */
-  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  background-color: #388e3c;
+  border-top: 2px solid #c62828;
 }
 
 .nav-menu {
@@ -53,149 +54,119 @@ nav {
   justify-content: center;
 }
 
-.nav-menu > li {
+.nav-menu li {
   position: relative;
 }
 
-.nav-menu > li > a {
+.nav-menu a {
   display: block;
   padding: 14px 20px;
-  color: #014421;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-right: 1px solid #ddd;
+  transition: background 0.3s;
 }
 
-.nav-menu > li:last-child > a {
-  border-right: none;
+.nav-menu a:hover {
+  background-color: #2e7d32;
 }
 
-.nav-menu > li > a:hover {
-  background-color: #eaffea; /* Hijau terang lembut */
-}
-
-/* DROPDOWN */
+/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  top: 100%;
-  left: 0;
-  min-width: 230px;
-  border: 1px solid #ccc;
+  background-color: #43a047;
+  min-width: 220px;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dropdown-content li a {
+  padding: 12px 16px;
+  color: #fff;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-content li a {
-  display: block;
-  padding: 10px 15px;
-  color: #014421;
-  font-weight: normal;
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
-}
-
-.dropdown-content li a:hover {
-  background-color: #eaffea;
-}
-
-/* ======= MAIN CONTENT ======= */
+/* Main Container */
 .container {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 25px;
-  background-color: white;
-  border: 3px solid #ffd700;
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
 
 .welcome h2 {
-  color: #014421;
-  margin-bottom: 15px;
+  font-size: 2em;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .welcome p {
-  line-height: 1.7;
+  font-size: 1.1em;
+  text-align: center;
+  color: #555;
 }
 
-/* ======= FOOTER ======= */
+/* Footer */
 footer {
-  background-color: #013015;
-  color: white;
+  background: linear-gradient(to right, #1b5e20, #388e3c);
+  color: #fff;
   padding: 30px 20px 15px;
-  border-top: 4px solid #ffd700;
-  font-size: 0.9rem;
+  margin-top: 40px;
 }
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.footer-content div {
-  flex: 1;
-  min-width: 250px;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-content h3 {
-  color: #ffcc00;
+  font-size: 1.2em;
   margin-bottom: 10px;
+  color: #ffeb3b;
+}
+
+.footer-content p {
+  margin-bottom: 5px;
+  font-size: 0.95em;
 }
 
 .footer-bottom {
   text-align: center;
-  font-size: 0.8rem;
-  border-top: 1px solid #444;
-  padding-top: 10px;
+  padding-top: 15px;
+  font-size: 0.9em;
+  color: #ccc;
 }
 
-/* ======= RESPONSIVE ======= */
-@media screen and (max-width: 768px) {
+/* Responsive */
+@media (max-width: 768px) {
   .banner {
     flex-direction: column;
     text-align: center;
-  }
-
-  .banner h1 {
-    font-size: 1.3rem;
-    margin: 10px 0;
-  }
-
-  .logo {
-    height: 60px;
-    margin: 5px;
   }
 
   .nav-menu {
     flex-direction: column;
   }
 
-  .nav-menu > li > a {
-    border-right: none;
-    border-bottom: 1px solid #eee;
-  }
-
-  .dropdown-content {
-    position: relative;
-    box-shadow: none;
-    border: none;
-  }
-
-  .dropdown-content li a {
-    padding-left: 30px;
-  }
-
   .footer-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 }
