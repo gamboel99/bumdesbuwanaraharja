@@ -1,6 +1,4 @@
-/* style.css - BUMDes Buwana Raharja */
-
-/* Reset dasar */
+/* Reset & Umum */
 * {
   margin: 0;
   padding: 0;
@@ -8,161 +6,196 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #e6f5e6, #ffffff);
-  color: #1b3b1b;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
 }
 
-header {
-  background: #004d00;
+/* ======= HEADER ======= */
+.banner {
+  background-color: #014421; /* Hijau tua */
   color: white;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 4px solid #ffd700; /* Kuning */
+}
+
+.logo {
+  height: 70px;
+}
+
+.banner h1 {
+  flex: 1;
   text-align: center;
-  position: relative;
-  border-bottom: 4px solid #c00;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
-header img.logo {
-  height: 60px;
-  position: absolute;
-  top: 10px;
+.banner h1 span {
+  display: block;
+  font-size: 1.2rem;
+  color: #ffcc00; /* Kuning */
 }
 
-header img.logo.left {
-  left: 20px;
-}
-
-header img.logo.right {
-  right: 20px;
-}
-
-header h1 {
-  font-size: 28px;
-  margin: 0;
-}
-
+/* ======= NAVIGATION ======= */
 nav {
-  background: #006600;
-  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 4px solid #d40000; /* Merah */
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
-nav ul {
+.nav-menu {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-nav ul li {
+.nav-menu > li {
   position: relative;
 }
 
-nav ul li a {
+.nav-menu > li > a {
   display: block;
   padding: 14px 20px;
-  color: white;
+  color: #014421;
   text-decoration: none;
-  transition: background 0.3s;
+  font-weight: bold;
+  border-right: 1px solid #ddd;
 }
 
-nav ul li a:hover {
-  background: #009900;
+.nav-menu > li:last-child > a {
+  border-right: none;
 }
 
-nav ul li ul.dropdown {
+.nav-menu > li > a:hover {
+  background-color: #eaffea; /* Hijau terang lembut */
+}
+
+/* DROPDOWN */
+.dropdown-content {
   display: none;
   position: absolute;
-  top: 48px;
+  background-color: white;
+  top: 100%;
   left: 0;
-  background: #006600;
-  min-width: 200px;
+  min-width: 230px;
+  border: 1px solid #ccc;
   z-index: 1000;
-  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-nav ul li:hover ul.dropdown {
-  display: flex;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-nav ul li ul.dropdown li a {
-  padding: 12px;
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: #014421;
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
 }
 
+.dropdown-content li a:hover {
+  background-color: #eaffea;
+}
+
+/* ======= MAIN CONTENT ======= */
 .container {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-left: 5px solid #009900;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: white;
+  border: 3px solid #ffd700;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.container h2 {
-  color: #004d00;
+.welcome h2 {
+  color: #014421;
   margin-bottom: 15px;
 }
 
+.welcome p {
+  line-height: 1.7;
+}
+
+/* ======= FOOTER ======= */
 footer {
-  background: #004d00;
+  background-color: #013015;
   color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  border-top: 4px solid #c00;
+  padding: 30px 20px 15px;
+  border-top: 4px solid #ffd700;
+  font-size: 0.9rem;
 }
 
-footer a {
-  color: yellow;
-  text-decoration: none;
-}
-
-hr.decorative {
-  border: none;
-  height: 4px;
-  background: linear-gradient(to right, red, yellow, green);
-  margin: 20px 0;
-}
-
-/* Form style (kontak & pengaduan) */
-form {
+.footer-content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-form label {
-  margin-top: 10px;
-  font-weight: bold;
+.footer-content div {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 10px;
 }
 
-form input, form textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.footer-content h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
 }
 
-form button {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #007700;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid #444;
+  padding-top: 10px;
 }
 
-form button:hover {
-  background-color: #00aa00;
-}
-
+/* ======= RESPONSIVE ======= */
 @media screen and (max-width: 768px) {
-  nav ul {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner h1 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+  }
+
+  .logo {
+    height: 60px;
+    margin: 5px;
+  }
+
+  .nav-menu {
     flex-direction: column;
   }
 
-  header img.logo {
-    display: none;
+  .nav-menu > li > a {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    border: none;
+  }
+
+  .dropdown-content li a {
+    padding-left: 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
   }
 }
