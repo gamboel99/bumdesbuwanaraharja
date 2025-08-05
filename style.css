@@ -1,177 +1,109 @@
-/* === RESET DASAR === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('../asset/bg-pattern.png') repeat;
-  background-color: #f9f9f9;
-  color: #222;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('asset/bg-pattern.png') repeat;
+  background-color: #f5fff5;
+  color: #333;
 }
 
-/* === HEADER BANNER === */
 .banner {
-  background: linear-gradient(to right, #006400, #00cc66);
-  padding: 20px 10px;
+  background: linear-gradient(to right, #006400, #32cd32);
+  color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 5px solid #ffd700;
+  justify-content: space-between;
+  padding: 15px 20px;
 }
 
-.banner img {
-  width: 70px;
+.logo {
+  width: 80px;
   height: auto;
 }
 
 .banner h1 {
-  flex: 1;
   text-align: center;
-  color: #fff;
-  font-size: 1.8rem;
+  flex-grow: 1;
+  font-size: 24px;
 }
 
-/* === NAVBAR === */
-nav {
-  background-color: #004d26;
-  position: relative;
-  z-index: 10;
+.navbar {
+  background-color: #228B22;
+  overflow: hidden;
 }
 
-nav ul {
-  list-style: none;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
 }
 
-nav ul li {
+.navbar li {
   position: relative;
 }
 
-nav ul li a {
+.navbar a {
   display: block;
-  padding: 10px 20px;
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  background-color: transparent;
-  transition: background 0.3s;
+  padding: 14px 18px;
 }
 
-nav ul li:hover > a {
-  background-color: #006633;
+.navbar a:hover,
+.dropdown:hover > a {
+  background-color: #006400;
 }
 
-/* === DROPDOWN === */
-nav ul li ul {
+.dropdown-content {
   display: none;
   position: absolute;
-  background-color: #004d26;
-  min-width: 200px;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
+  background-color: #32cd32;
+  min-width: 220px;
+  z-index: 1;
+  top: 48px;
 }
 
-nav ul li:hover ul {
+.dropdown-content li a {
+  color: white;
+  padding: 12px;
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-nav ul li ul li {
-  width: 100%;
-}
-
-nav ul li ul li a {
-  padding: 10px;
-  background-color: #004d26;
-}
-
-nav ul li ul li a:hover {
-  background-color: #006633;
-}
-
-/* === CONTAINER UTAMA === */
-.container {
-  max-width: 1100px;
+.content-container {
+  max-width: 960px;
   margin: 30px auto;
-  padding: 20px;
-  background-color: #ffffffcc;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  border-left: 5px solid gold;
+  border-right: 5px solid red;
 }
 
-/* === FOOTER === */
-footer {
-  background-color: #003311;
-  color: #fff;
-  padding: 30px 20px;
-  margin-top: 40px;
-  font-size: 0.95rem;
-  border-top: 5px solid #ffd700;
-}
-
-footer .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-footer .footer-section {
-  flex: 1;
-  min-width: 200px;
-}
-
-footer h3 {
-  color: #ffd700;
+.welcome h2 {
+  color: #006400;
   margin-bottom: 10px;
 }
 
-footer ul {
-  list-style: none;
-  padding: 0;
+.welcome p {
+  font-size: 1.1em;
+  color: #333;
 }
 
-footer ul li {
-  margin-bottom: 6px;
-}
-
-footer ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer ul li a:hover {
-  text-decoration: underline;
-}
-
-footer .credit {
+.footer {
+  background-color: #004d00;
+  color: white;
+  padding: 20px;
   text-align: center;
-  margin-top: 20px;
-  font-size: 0.85rem;
-  color: #ccc;
+  font-size: 0.9em;
+  border-top: 4px solid #ff0000;
 }
 
-/* === RESPONSIF === */
-@media screen and (max-width: 768px) {
-  .banner h1 {
-    font-size: 1.4rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    width: 100%;
-  }
-
-  .footer-content {
-    flex-direction: column;
-  }
+.footer-info p,
+.footer-credit p {
+  margin: 5px 0;
 }
