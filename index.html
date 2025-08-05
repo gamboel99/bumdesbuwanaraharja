@@ -1,11 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BUMDes Buwana Raharja</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: repeating-linear-gradient(
+        45deg,
+        #e8f5e9,
+        #e8f5e9 20px,
+        #c8e6c9 20px,
+        #c8e6c9 40px
+      );
+    }
+
+    header {
+      background-color: #1b5e20;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 70px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .banner-sub {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .highlight-red {
+      color: red;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #388e3c;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li:hover {
+      background-color: #2e7d32;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #4caf50;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      z-index: 1000;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .container h2 {
+      color: #1b5e20;
+      border-bottom: 2px solid #c8e6c9;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      color: #2e7d32;
+      border-left: 5px solid #ffcc00;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,6 +138,7 @@
     </div>
     <img src="assets/logo_bumdes.png" alt="Logo BUMDes" />
   </header>
+
   <nav>
     <ul>
       <li><a href="#">Profil</a>
@@ -26,25 +149,80 @@
       </li>
       <li><a href="#">Unit Usaha</a>
         <ul>
-          <li><a href="#">Unit Perdagangan</a></li>
-          <li><a href="#">Unit Jasa Keuangan</a></li>
-          <li><a href="#">Unit Layanan Air Bersih</a></li>
-          <li><a href="#">Unit Pariwisata Desa</a></li>
-          <li><a href="#">Unit Persewaan Alat</a></li>
+          <li><a href="#">Pertanian</a></li>
+          <li><a href="#">Peternakan</a></li>
+          <li><a href="#">Perikanan</a></li>
+          <li><a href="#">Kerajinan / Ekraf</a></li>
+          <li><a href="#">Fintech</a></li>
+          <li><a href="#">Video Shoot & Digital Editing</a></li>
+          <li><a href="#">Kuliner</a></li>
+          <li><a href="#">Toko ATK</a></li>
+          <li><a href="#">Bank Sampah</a></li>
+          <li><a href="#">Jasa Keuangan Mikro</a></li>
         </ul>
       </li>
       <li><a href="#">Program BUMDes</a></li>
-      <li><a href="#">Agenda Kegiatan</a></li>
+      <li><a href="#">Agenda</a></li>
       <li><a href="#">Dokumentasi</a></li>
-      <li><a href="#">Laporan Akuntabilitas</a></li>
+      <li><a href="#">Laporan</a></li>
     </ul>
   </nav>
+
   <div class="container">
     <h2>Selamat Datang di Website <span class="highlight-red">BUMDes Buwana Raharja</span></h2>
-    <p>Website ini memuat informasi lengkap mengenai profil, kegiatan, unit usaha, dan laporan akuntabilitas BUMDes Desa Keling.</p>
+
+    <div class="section">
+      <h3>Gambaran Umum</h3>
+      <p>BUMDes Buwana Raharja merupakan lembaga usaha milik Desa Keling yang dibentuk untuk mengelola potensi lokal dan meningkatkan kesejahteraan warga secara berkelanjutan.</p>
+    </div>
+
+    <div class="section">
+      <h3>Berita Terbaru</h3>
+      <ul>
+        <li>🔔 BUMDes Luncurkan Aplikasi Pembayaran Digital di Pasar Desa (Agustus 2025)</li>
+        <li>🏞️ Pembukaan Unit Wisata Edukasi Pertanian mulai beroperasi pekan ini</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Keluhan Warga</h3>
+      <ul>
+        <li>💬 Air bersih belum mengalir ke RT 04 RW 03</li>
+        <li>💬 Layanan toko desa tutup lebih awal</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Keluhan yang Sudah Ditangani</h3>
+      <ul>
+        <li>✅ Jalan akses ke wisata desa telah diperbaiki</li>
+        <li>✅ Pasokan pupuk untuk petani sudah normal</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Pengajuan Kerjasama</h3>
+      <p>Terbuka peluang kemitraan dalam bidang pertanian organik dan pengolahan sampah berbasis desa. Silakan ajukan proposal via email atau hubungi kantor BUMDes.</p>
+    </div>
+
+    <div class="section">
+      <h3>Rencana Pengembangan</h3>
+      <ul>
+        <li>🛠️ Pendirian unit bengkel & servis motor desa</li>
+        <li>🌱 Pengembangan kebun buah edukatif untuk anak-anak</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Informasi Rekrutmen</h3>
+      <p>Saat ini dibuka lowongan untuk posisi staf administrasi dan operator toko desa. Kirim lamaran ke email: <strong>hr.bumdeskeling@gmail.com</strong></p>
+    </div>
   </div>
+
   <footer>
-    &copy; 2025 BUMDes Buwana Raharja - Desa Keling
+    &copy; 2025 BUMDes Buwana Raharja - Desa Keling, Jl. Raya Keling, Kediri, Jawa Timur<br>
+    Email: info@bumdeskeling.id<br>
+    Developed by <strong>CV Mitra Utama Consultindo</strong>
   </footer>
 </body>
 </html>
