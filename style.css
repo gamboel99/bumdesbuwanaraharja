@@ -1,94 +1,62 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-image: repeating-linear-gradient(45deg, #e5ffe5, #e5ffe5 10px, #ffffff 10px, #ffffff 20px);
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: repeating-linear-gradient(
+    45deg,
+    #f9f9f9,
+    #f9f9f9 10px,
+    #e0e0e0 10px,
+    #e0e0e0 20px
+  );
 }
 
-.banner {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #004d00;
-  padding: 1rem 2rem;
+  background-color: #004d26;
+  padding: 10px 20px;
   color: white;
 }
 
-.logo {
-  height: 60px;
+header img {
+  height: 70px;
 }
 
-.judul {
-  font-size: 2.2rem;
-  font-weight: 600;
-  text-align: center;
-  flex-grow: 1;
-}
-
-.navbar {
-  background-color: #006600;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+nav {
+  background-color: #007b33;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.navbar li {
-  position: relative;
-}
-
-.navbar a {
-  display: block;
+nav a {
   color: white;
-  padding: 0.8rem 1.2rem;
+  padding: 10px 15px;
   text-decoration: none;
-}
-
-.navbar a:hover,
-.dropdown:hover > a {
-  background-color: #228B22;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #006600;
-  min-width: 200px;
-  z-index: 1;
-  top: 100%;
-  left: 0;
-}
-
-.dropdown-content a {
-  padding: 0.8rem 1rem;
-}
-
-.dropdown:hover .dropdown-content {
   display: block;
 }
 
-.konten {
-  padding: 2rem;
+nav a:hover {
+  background-color: #005522;
 }
 
-.welcome {
-  background-color: white;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.footer {
-  background-color: #004d00;
+footer {
+  background-color: #004d26;
   color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h1, h2, h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
