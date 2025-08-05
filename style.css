@@ -1,116 +1,178 @@
-/* Reset dasar */
-body {
+/* Reset dan umum */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
+  color: #222;
 }
 
 /* Header */
-.header {
+header {
+  background-color: #006400; /* Hijau tua */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #005f28; /* Hijau tua */
-  color: white;
-  padding: 15px 30px;
+  padding: 10px 20px;
   border-bottom: 5px solid #ffd700; /* Kuning */
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.header-logo img {
+.logo-kiri,
+.logo-kanan {
   height: 70px;
   width: auto;
 }
 
-.header-title {
-  font-size: 22px;
+.judul {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
   font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.5;
+  flex: 1;
 }
 
 /* Navbar */
-.navbar {
-  background-color: white;
-  border-bottom: 4px solid red;
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-bottom: 4px solid #d40000; /* Merah */
+  z-index: 100;
 }
 
-.navbar ul {
+nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.navbar li {
+nav ul li {
   position: relative;
 }
 
-.navbar a {
+nav ul li a {
   display: block;
   padding: 14px 20px;
   color: #000;
   text-decoration: none;
-  font-weight: 500;
-  border-right: 1px solid #ddd;
+  font-weight: 600;
+  border-right: 1px solid #ccc;
 }
 
-.navbar a:hover,
-.navbar li:hover > a {
-  background-color: #eee;
-  color: #b10000;
+nav ul li:last-child a {
+  border-right: none;
+}
+
+nav ul li a:hover {
+  background-color: #e0ffe0; /* Hijau terang lembut */
+  color: #006400;
 }
 
 /* Dropdown */
-.navbar li ul {
+nav ul li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: white;
-  min-width: 200px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
   z-index: 999;
 }
 
-.navbar li:hover ul {
+nav ul li:hover ul {
   display: block;
 }
 
-.navbar li ul li a {
+nav ul li ul li a {
   border-right: none;
   padding: 10px 15px;
+  font-weight: normal;
+  white-space: nowrap;
 }
 
-/* Konten utama */
+/* Container Utama */
 .container {
   max-width: 1000px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 30px;
   background-color: white;
-  border-left: 5px solid green;
-  border-right: 5px solid red;
-  border-top: 3px solid yellow;
-  border-bottom: 3px solid yellow;
+  border: 3px solid #ffd700;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-h1 {
-  font-size: 24px;
-  color: #333;
+.container h1 {
+  color: #006400;
+  margin-bottom: 15px;
 }
 
-p {
+.container p {
   font-size: 16px;
-  color: #555;
   line-height: 1.6;
-  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #003300;
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  border-top: 5px solid #ffd700;
+  font-size: 0.9rem;
+}
+
+footer .footer-section {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #ffcccb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .judul {
+    margin: 10px 0;
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  nav ul li ul {
+    position: relative;
+    box-shadow: none;
+    border: none;
+  }
+
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
 }
