@@ -1,50 +1,42 @@
-/* Reset dan dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
 
 body {
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaffea;
+  color: #003300;
 }
 
-/* Banner Header */
-.banner {
+header {
+  background-color: #006400;
+  color: white;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
-  background: #005f3c; /* hijau tua */
-  border-bottom: 4px solid #d32f2f; /* merah */
 }
 
-.banner img {
-  width: 80px;
-  height: auto;
+header img {
+  height: 60px;
 }
 
-.banner h1 {
-  color: white;
-  font-size: 1.8em;
+header h1 {
+  margin: 0 1rem;
+  flex-grow: 1;
   text-align: center;
-  flex: 1;
+  font-size: 1.5rem;
+  color: white;
 }
 
-/* Navigasi */
 nav {
-  background: #388e3c; /* hijau terang */
-  border-top: 4px solid #ffc107; /* aksen kuning */
+  background-color: #008000;
 }
 
 nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 nav ul li {
@@ -53,14 +45,13 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  padding: 12px 20px;
+  padding: 0.75rem 1.5rem;
   color: white;
   text-decoration: none;
-  transition: background 0.3s;
 }
 
-nav ul li a:hover {
-  background: #2e7d32; /* sedikit lebih gelap */
+nav ul li:hover {
+  background-color: #004d00;
 }
 
 nav ul li ul {
@@ -68,9 +59,9 @@ nav ul li ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #2e7d32;
-  z-index: 999;
+  background-color: #006400;
   min-width: 200px;
+  z-index: 999;
 }
 
 nav ul li:hover ul {
@@ -81,96 +72,31 @@ nav ul li ul li {
   width: 100%;
 }
 
-nav ul li ul li a {
-  padding: 10px;
-  border-bottom: 1px solid #4caf50;
-}
-
-/* Kontainer konten utama */
 .container {
-  padding: 30px;
   max-width: 1200px;
-  margin: auto;
-  background: white;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-  background: #1b5e20; /* hijau gelap */
-  color: white;
-  padding: 30px 20px;
-  font-size: 0.9em;
+.highlight-red {
+  color: #cc0000;
+  font-weight: bold;
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-  border-bottom: 2px solid #fdd835; /* kuning */
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.footer-section p,
-.footer-section a {
-  color: #f1f1f1;
-  text-decoration: none;
-}
-
-.footer-section a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
+.banner-sub {
+  font-size: 1rem;
+  color: #ffff00; /* kuning */
   text-align: center;
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  margin-top: -10px;
 }
 
-/* Responsif */
-@media (max-width: 768px) {
-  .banner h1 {
-    font-size: 1.4em;
-  }
-
-  .banner {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-section {
-    text-align: center;
-  }
+footer {
+  background-color: #004d00;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
