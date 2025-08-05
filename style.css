@@ -1,171 +1,113 @@
-/* Umum */
-body {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfdfd;
-  color: #222;
+  box-sizing: border-box;
 }
 
-/* Header */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #005c27; /* Hijau tua */
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
 header {
+  background-color: #005c27;
+  padding: 20px;
+  border-bottom: 4px solid #ffd700; /* Kuning */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #005f2f; /* Hijau tua */
-  padding: 10px 20px;
-  border-bottom: 5px solid #fcd116; /* Kuning */
+  gap: 20px;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
+header img {
+  height: 80px;
+  width: auto;
 }
 
-.logo-container img {
-  height: 60px;
-  margin-right: 15px;
-}
-
-.site-title {
-  font-size: 1.8rem;
-  font-weight: bold;
+header .judul {
   color: white;
-  text-shadow: 1px 1px 2px #000;
 }
 
-/* Navbar */
+header .judul h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 nav {
   background-color: #ffffff;
-  border-bottom: 3px solid #ff0000; /* Merah */
+  border-bottom: 4px solid #d40000; /* Merah */
+  padding: 0 20px;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 nav ul li {
   position: relative;
-}
-
-nav ul li a {
-  display: block;
-  padding: 12px 20px;
-  color: #222;
-  text-decoration: none;
-  font-weight: 500;
+  margin-right: 20px;
+  padding: 14px 10px;
   border-right: 1px solid #ccc;
 }
 
-nav ul li:hover > a {
-  background-color: #dfffe0; /* Hijau terang */
-  color: #005f2f;
+nav ul li:last-child {
+  border-right: none;
 }
 
-/* Dropdown */
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  z-index: 999;
-  max-height: 300px;
-  overflow-y: auto;
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav ul li:hover ul {
+nav ul li:hover > ul {
   display: block;
 }
 
-nav ul li ul li a {
-  padding: 10px 15px;
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  top: 48px;
+  left: 0;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+nav ul ul li {
+  width: 180px;
+  padding: 10px;
   border-bottom: 1px solid #eee;
 }
 
-/* Container */
-.container {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 25px;
-  background-color: white;
-  border: 2px solid #fcd116; /* Kuning pembatas */
+main {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  border: 2px solid #ccc;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 100, 0, 0.2);
+  background-color: white;
 }
 
-/* Footer */
 footer {
-  background-color: #004225; /* Hijau tua */
+  background-color: #004b20;
   color: white;
-  padding: 30px 20px 15px;
-  border-top: 5px solid #fcd116;
-  font-size: 0.9rem;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-section h4 {
-  color: #fcd116;
-  margin-bottom: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 4px solid #ffd700;
 }
 
 footer a {
-  color: #ffcccb;
+  color: #ffd700;
   text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.85rem;
-  color: #ccc;
-  border-top: 1px solid #666;
-  padding-top: 15px;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .site-title {
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li a {
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .footer-container {
-    flex-direction: column;
-  }
 }
