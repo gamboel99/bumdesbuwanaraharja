@@ -80,3 +80,23 @@ nav ul li ul li {
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.highlight-red {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.banner-sub {
+  font-size: 1rem;
+  color: #ffff00; /* kuning */
+  text-align: center;
+  margin-top: -10px;
+}
+
+footer {
+  background-color: #004d00;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
