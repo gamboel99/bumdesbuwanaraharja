@@ -8,31 +8,45 @@
 </head>
 <body>
   <header class="banner">
-    <img src="asset/logo.png" alt="Logo Kiri" class="logo-kiri" />
-    <h1>BUMDes Buwana Raharja</h1>
-    <img src="asset/logo.png" alt="Logo Kanan" class="logo-kanan" />
+    <div class="logo kiri">
+      <img src="asset/logo_kiri.png" alt="Logo Kiri" />
+    </div>
+    <div class="judul">
+      <h1>BUMDes Buwana Raharja</h1>
+      <p>Desa Bukaan, Kec. Kepung, Kab. Kediri</p>
+    </div>
+    <div class="logo kanan">
+      <img src="asset/logo_kanan.png" alt="Logo Kanan" />
+    </div>
   </header>
 
   <nav class="navbar">
     <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="visi_misi.html">Profil</a></li>
+      <li><a href="index.html" class="active">Beranda</a></li>
+      <li class="dropdown">
+        <a href="#">Profil</a>
+        <ul class="dropdown-content">
+          <li><a href="visi_misi.html">Visi & Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
+          <li><a href="program_kerja.html">Program Kerja</a></li>
+        </ul>
+      </li>
       <li class="dropdown">
         <a href="#">Unit Usaha</a>
         <ul class="dropdown-content">
           <li><a href="unit_perdagangan.html">Perdagangan Umum</a></li>
-          <li><a href="unit_tokodesa.html">Usaha Toko Desa</a></li>
-          <li><a href="unit_airbersih.html">Layanan Air Bersih</a></li>
+          <li><a href="unit_toko.html">Usaha Toko Desa</a></li>
+          <li><a href="unit_air.html">Layanan Air Bersih</a></li>
           <li><a href="unit_sampah.html">Pengelolaan Sampah</a></li>
           <li><a href="unit_pertanian.html">Pertanian & Peternakan</a></li>
           <li><a href="unit_persewaan.html">Persewaan Alat</a></li>
-          <li><a href="unit_keuanganmikro.html">Jasa Keuangan Mikro</a></li>
+          <li><a href="unit_keuangan.html">Jasa Keuangan Mikro</a></li>
           <li><a href="unit_wisata.html">Unit Wisata Desa</a></li>
           <li><a href="unit_kuliner.html">Warung Kuliner</a></li>
           <li><a href="unit_bengkel.html">Bengkel dan Servis</a></li>
           <li><a href="unit_ekraf.html">Kerajinan Tangan (Ekraf)</a></li>
-          <li><a href="unit_keuangandigital.html">Keuangan Digital & Web Developer</a></li>
-          <li><a href="unit_videoshooting.html">Video Shooting & Editing</a></li>
+          <li><a href="unit_digital.html">Keuangan Digital & Web Developer</a></li>
+          <li><a href="unit_video.html">Video Shooting & Editing</a></li>
         </ul>
       </li>
       <li><a href="dokumentasi.html">Dokumentasi</a></li>
@@ -43,19 +57,32 @@
   </nav>
 
   <main class="konten">
-    <h2>Selamat Datang di BUMDes Buwana Raharja</h2>
-    <p>Portal resmi informasi dan layanan Badan Usaha Milik Desa Buwana Raharja.</p>
+    <section class="selamat-datang">
+      <h2>Selamat Datang di Website Resmi BUMDes Buwana Raharja</h2>
+      <p>Website ini menjadi pusat informasi resmi Badan Usaha Milik Desa (BUMDes) Buwana Raharja. Kami hadir untuk meningkatkan perekonomian desa dan kesejahteraan masyarakat melalui berbagai unit usaha yang inovatif dan profesional.</p>
+    </section>
+
+    <section class="berita-terbaru">
+      <h2>Berita & Kegiatan Terbaru</h2>
+      <div class="berita-item">
+        <h3>Pembukaan Unit Usaha Baru: Warung Kuliner Desa</h3>
+        <p>Unit usaha kuliner resmi dibuka pada tanggal 1 Agustus 2025 untuk meningkatkan pemberdayaan warga dan memperkenalkan cita rasa lokal.</p>
+      </div>
+      <div class="berita-item">
+        <h3>Pelatihan Keuangan Digital untuk Pemuda Desa</h3>
+        <p>Pelatihan intensif diberikan kepada pemuda desa untuk meningkatkan literasi keuangan dan mendorong kemandirian digital.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-content">
+    <div class="footer-info">
       <p><strong>Alamat:</strong> Jl. Raya Keling, Bukaan, Keling, Kec. Kepung, Kabupaten Kediri, Jawa Timur 64293</p>
-      <p><strong>Email:</strong> info@buwanaraharja.id | <strong>Website:</strong> www.buwanaraharja.id</p>
-      <p>
-        <strong>Media Sosial:</strong>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
-      </p>
-      <p><strong>© 2025 BUMDes Buwana Raharja</strong> | Dikembangkan oleh CV. Mitra Utama Consultindo</p>
+      <p><strong>Email:</strong> bumdes.buwana@gmail.com | <strong>Website:</strong> www.bumdesbuwana.desa.id</p>
+      <p><strong>Media Sosial:</strong> @bumdesbuwana (Facebook, Instagram, YouTube)</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 BUMDes Buwana Raharja. Dikembangkan oleh CV Mitra Utama Consultindo</p>
     </div>
   </footer>
 </body>
