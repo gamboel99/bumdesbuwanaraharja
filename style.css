@@ -1,108 +1,102 @@
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('asset/pattern.png');
-  background-size: cover;
-  background-attachment: fixed;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaffea;
+  color: #003300;
 }
 
-.banner {
-  background: linear-gradient(to right, #006400, #00ff7f);
+header {
+  background-color: #006400;
   color: white;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  border-bottom: 5px solid red;
 }
 
-.logo {
-  width: 60px;
-  height: auto;
+header img {
+  height: 60px;
 }
 
-h1 {
-  font-size: 1.8rem;
+header h1 {
+  margin: 0 1rem;
+  flex-grow: 1;
   text-align: center;
-  flex: 1;
+  font-size: 1.5rem;
+  color: white;
 }
 
-.navbar {
-  background-color: #228B22;
-  overflow: hidden;
+nav {
+  background-color: #008000;
 }
 
-.navbar ul {
+nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
 
-.navbar li {
+nav ul li {
   position: relative;
 }
 
-.navbar a {
+nav ul li a {
   display: block;
+  padding: 0.75rem 1.5rem;
   color: white;
-  padding: 14px 20px;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.navbar li:hover > a {
-  background-color: #006400;
+nav ul li:hover {
+  background-color: #004d00;
 }
 
-.dropdown-menu {
+nav ul li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #228B22;
-  z-index: 999;
+  background-color: #006400;
   min-width: 200px;
+  z-index: 999;
 }
 
-.dropdown-menu li {
-  width: 100%;
-}
-
-.dropdown:hover .dropdown-menu {
+nav ul li:hover ul {
   display: block;
 }
 
-.kontainer {
-  background: rgba(255, 255, 255, 0.95);
-  margin: 20px auto;
-  padding: 30px;
-  max-width: 1000px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+nav ul li ul li {
+  width: 100%;
 }
 
-.kontainer h2 {
-  color: #006400;
-  margin-bottom: 10px;
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
+.highlight-red {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.banner-sub {
+  font-size: 1rem;
+  color: #ffff00; /* kuning */
+  text-align: center;
+  margin-top: -10px;
+}
+
+footer {
   background-color: #004d00;
   color: white;
-  padding: 20px 30px;
-  margin-top: 30px;
-  border-top: 5px solid yellow;
-}
-
-.footer p {
-  margin: 6px 0;
-  font-size: 0.9em;
-}
-
-.footer-konten {
-  max-width: 1000px;
-  margin: auto;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
