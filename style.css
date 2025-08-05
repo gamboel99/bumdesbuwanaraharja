@@ -1,4 +1,4 @@
-/* Reset */
+/* ========== RESET DASAR ========== */
 * {
   margin: 0;
   padding: 0;
@@ -6,167 +6,197 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #222;
   line-height: 1.6;
 }
 
-/* Banner Header */
+/* ========== HEADER / BANNER ========== */
 .banner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #1b5e20, #4caf50);
-  padding: 15px 30px;
+  align-items: center;
+  background: #014421;
+  padding: 10px 30px;
+  border-bottom: 5px solid #d40000;
+}
+
+.banner img {
+  height: 80px;
+  width: auto;
+}
+
+.banner h1 {
+  font-size: 2em;
   color: #fff;
-  border-bottom: 4px solid #ffc107;
-}
-
-.logo {
-  width: 80px;
-  height: auto;
-}
-
-h1 {
   text-align: center;
-  font-size: 1.8em;
-  flex-grow: 1;
-  color: #fff;
+  flex: 1;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
 }
 
-h1 span {
-  font-size: 0.8em;
-  display: block;
-  margin-top: 4px;
-}
-
-/* Navigation */
+/* ========== NAVBAR ========== */
 nav {
-  background-color: #388e3c;
-  border-top: 2px solid #c62828;
+  background-color: #eaffea;
+  border-bottom: 3px solid #014421;
 }
 
-.nav-menu {
+nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.nav-menu li {
+nav ul li {
   position: relative;
 }
 
-.nav-menu a {
+nav ul li a {
   display: block;
-  padding: 14px 20px;
-  color: #fff;
+  padding: 14px 18px;
+  color: #014421;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
 
-.nav-menu a:hover {
-  background-color: #2e7d32;
+nav ul li a:hover {
+  background-color: #014421;
+  color: #fff;
 }
 
-/* Dropdown */
-.dropdown-content {
+nav ul li ul {
   display: none;
   position: absolute;
-  background-color: #43a047;
-  min-width: 220px;
+  background-color: #eaffea;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
   z-index: 1000;
-  border-radius: 0 0 6px 6px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #014421;
 }
 
-.dropdown-content li a {
-  padding: 12px 16px;
-  color: #fff;
-  display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dropdown:hover .dropdown-content {
+nav ul li:hover > ul {
   display: block;
 }
 
-/* Main Container */
+nav ul li ul li a {
+  padding: 10px 14px;
+}
+
+/* ========== CONTAINER UTAMA ========== */
 .container {
-  padding: 30px 20px;
   max-width: 1100px;
-  margin: auto;
-  background-color: #fff;
-  border-radius: 10px;
-  margin-top: 30px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* Animasi masuk */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== WELCOME SECTION ========== */
+.welcome {
+  padding: 15px;
+  background: linear-gradient(135deg, #eaffea 0%, #ffffff 100%);
+  border-left: 5px solid #014421;
+  border-radius: 8px;
 }
 
 .welcome h2 {
-  font-size: 2em;
-  color: #2e7d32;
+  font-size: 1.8em;
   margin-bottom: 10px;
-  text-align: center;
+  color: #014421;
+  position: relative;
+}
+
+.welcome h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #d40000;
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 .welcome p {
   font-size: 1.1em;
-  text-align: center;
-  color: #555;
+  text-align: justify;
 }
 
-/* Footer */
-footer {
-  background: linear-gradient(to right, #1b5e20, #388e3c);
-  color: #fff;
-  padding: 30px 20px 15px;
-  margin-top: 40px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: auto;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.footer-content h3 {
+.welcome p::before {
+  content: "🌱 ";
   font-size: 1.2em;
-  margin-bottom: 10px;
-  color: #ffeb3b;
+  vertical-align: middle;
 }
 
-.footer-content p {
-  margin-bottom: 5px;
+/* ========== FOOTER ========== */
+footer {
+  background-color: #014421;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 50px;
   font-size: 0.95em;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 15px;
-  font-size: 0.9em;
-  color: #ccc;
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
 
-/* Responsive */
+footer a:hover {
+  color: #f1c40f;
+}
+
+/* ========== GARIS PEMISAH ANTAR SECTION ========== */
+hr {
+  border: none;
+  border-top: 3px solid #014421;
+  margin: 40px 0;
+}
+
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
     text-align: center;
   }
 
-  .nav-menu {
+  nav ul {
     flex-direction: column;
   }
 
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  nav ul li {
+    width: 100%;
+  }
+
+  .container {
+    margin: 20px 10px;
+  }
+
+  .banner img {
+    height: 60px;
   }
 }
