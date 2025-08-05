@@ -1,202 +1,147 @@
-/* ========== RESET DASAR ========== */
-* {
+/* Reset dan dasar */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   color: #222;
-  line-height: 1.6;
 }
 
-/* ========== HEADER / BANNER ========== */
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #014421;
-  padding: 10px 30px;
-  border-bottom: 5px solid #d40000;
-}
-
-.banner img {
-  height: 80px;
-  width: auto;
-}
-
-.banner h1 {
-  font-size: 2em;
-  color: #fff;
-  text-align: center;
-  flex: 1;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px #000;
-}
-
-/* ========== NAVBAR ========== */
-nav {
-  background-color: #eaffea;
-  border-bottom: 3px solid #014421;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  display: block;
-  padding: 14px 18px;
-  color: #014421;
+a {
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s;
+  color: inherit;
 }
 
-nav ul li a:hover {
-  background-color: #014421;
-  color: #fff;
-}
-
-nav ul li ul {
-  display: none;
-  position: absolute;
-  background-color: #eaffea;
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  z-index: 1000;
-  border: 1px solid #014421;
-}
-
-nav ul li:hover > ul {
-  display: block;
-}
-
-nav ul li ul li a {
-  padding: 10px 14px;
-}
-
-/* ========== CONTAINER UTAMA ========== */
 .container {
-  max-width: 1100px;
-  margin: 30px auto;
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
-  background-color: #fefefe;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 1s ease-in-out;
-  transition: transform 0.3s;
 }
 
-.container:hover {
-  transform: scale(1.01);
-}
-
-/* Animasi masuk */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ========== WELCOME SECTION ========== */
-.welcome {
-  padding: 15px;
-  background: linear-gradient(135deg, #eaffea 0%, #ffffff 100%);
-  border-left: 5px solid #014421;
-  border-radius: 8px;
-}
-
-.welcome h2 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #014421;
+/* Header */
+header {
+  background: linear-gradient(to right, #006400, #90ee90);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
   position: relative;
 }
 
-.welcome h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #d40000;
-  margin-top: 8px;
-  border-radius: 2px;
-}
-
-.welcome p {
-  font-size: 1.1em;
-  text-align: justify;
-}
-
-.welcome p::before {
-  content: "🌱 ";
-  font-size: 1.2em;
+header img {
+  height: 80px;
   vertical-align: middle;
 }
 
-/* ========== FOOTER ========== */
-footer {
-  background-color: #014421;
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 50px;
-  font-size: 0.95em;
+header h1 {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 28px;
+  vertical-align: middle;
 }
 
-footer a {
-  color: #fff;
+/* Navigasi */
+nav {
+  background-color: #228B22;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #2e8b57;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #006400;
+}
+
+/* Section Info Baru */
+.section-box {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-left: 8px solid #006400;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.section-box h2 {
+  color: #006400;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+.section-box p {
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #004d00;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h4 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #f0f0f0;
+  font-size: 14px;
+}
+
+.footer-section a:hover {
+  color: #ffff99;
   text-decoration: underline;
 }
 
-footer a:hover {
-  color: #f1c40f;
+footer .bottom-bar {
+  margin-top: 20px;
+  font-size: 13px;
+  border-top: 1px solid #666;
+  padding-top: 10px;
+  color: #ccc;
 }
 
-/* ========== GARIS PEMISAH ANTAR SECTION ========== */
-hr {
-  border: none;
-  border-top: 3px solid #014421;
-  margin: 40px 0;
-}
-
-/* ========== RESPONSIVE ========== */
+/* Responsif */
 @media (max-width: 768px) {
-  .banner {
+  nav {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
-  nav ul {
+  header h1 {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .footer-content {
     flex-direction: column;
-  }
-
-  nav ul li {
-    width: 100%;
-  }
-
-  .container {
-    margin: 20px 10px;
-  }
-
-  .banner img {
-    height: 60px;
+    align-items: center;
   }
 }
