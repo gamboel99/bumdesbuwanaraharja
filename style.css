@@ -1,4 +1,4 @@
-/* Reset dan umum */
+/* Reset & Umum */
 * {
   margin: 0;
   padding: 0;
@@ -7,172 +7,195 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
+  background-color: #f5f5f5;
   color: #222;
 }
 
-/* Header */
-header {
-  background-color: #006400; /* Hijau tua */
+/* ======= HEADER ======= */
+.banner {
+  background-color: #014421; /* Hijau tua */
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  border-bottom: 5px solid #ffd700; /* Kuning */
+  padding: 15px 30px;
+  border-bottom: 4px solid #ffd700; /* Kuning */
 }
 
-.logo-kiri,
-.logo-kanan {
+.logo {
   height: 70px;
-  width: auto;
 }
 
-.judul {
-  text-align: center;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.5;
+.banner h1 {
   flex: 1;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
-/* Navbar */
+.banner h1 span {
+  display: block;
+  font-size: 1.2rem;
+  color: #ffcc00; /* Kuning */
+}
+
+/* ======= NAVIGATION ======= */
 nav {
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
   border-bottom: 4px solid #d40000; /* Merah */
-  z-index: 100;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
-nav ul {
+.nav-menu {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-nav ul li {
+.nav-menu > li {
   position: relative;
 }
 
-nav ul li a {
+.nav-menu > li > a {
   display: block;
   padding: 14px 20px;
-  color: #000;
+  color: #014421;
   text-decoration: none;
-  font-weight: 600;
-  border-right: 1px solid #ccc;
+  font-weight: bold;
+  border-right: 1px solid #ddd;
 }
 
-nav ul li:last-child a {
+.nav-menu > li:last-child > a {
   border-right: none;
 }
 
-nav ul li a:hover {
-  background-color: #e0ffe0; /* Hijau terang lembut */
-  color: #006400;
+.nav-menu > li > a:hover {
+  background-color: #eaffea; /* Hijau terang lembut */
 }
 
-/* Dropdown */
-nav ul li ul {
+/* DROPDOWN */
+.dropdown-content {
   display: none;
   position: absolute;
+  background-color: white;
   top: 100%;
   left: 0;
-  background-color: white;
-  min-width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 230px;
   border: 1px solid #ccc;
-  z-index: 999;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-nav ul li:hover ul {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-nav ul li ul li a {
-  border-right: none;
+.dropdown-content li a {
+  display: block;
   padding: 10px 15px;
+  color: #014421;
   font-weight: normal;
-  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
 }
 
-/* Container Utama */
+.dropdown-content li a:hover {
+  background-color: #eaffea;
+}
+
+/* ======= MAIN CONTENT ======= */
 .container {
   max-width: 1000px;
   margin: 30px auto;
-  padding: 30px;
+  padding: 25px;
   background-color: white;
   border: 3px solid #ffd700;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.container h1 {
-  color: #006400;
+.welcome h2 {
+  color: #014421;
   margin-bottom: 15px;
 }
 
-.container p {
-  font-size: 16px;
-  line-height: 1.6;
+.welcome p {
+  line-height: 1.7;
 }
 
-/* Footer */
+/* ======= FOOTER ======= */
 footer {
-  background-color: #003300;
+  background-color: #013015;
   color: white;
-  padding: 25px 20px;
-  text-align: center;
-  border-top: 5px solid #ffd700;
+  padding: 30px 20px 15px;
+  border-top: 4px solid #ffd700;
   font-size: 0.9rem;
 }
 
-footer .footer-section {
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-content div {
+  flex: 1;
+  min-width: 250px;
   margin-bottom: 10px;
 }
 
-footer a {
-  color: #ffcccb;
-  text-decoration: none;
+.footer-content h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid #444;
+  padding-top: 10px;
 }
 
-/* Responsive */
+/* ======= RESPONSIVE ======= */
 @media screen and (max-width: 768px) {
-  header {
+  .banner {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
-  .judul {
-    margin: 10px 0;
+  .banner h1 {
     font-size: 1.3rem;
+    margin: 10px 0;
   }
 
-  nav ul {
+  .logo {
+    height: 60px;
+    margin: 5px;
+  }
+
+  .nav-menu {
     flex-direction: column;
   }
 
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul li a {
+  .nav-menu > li > a {
     border-right: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
   }
 
-  nav ul li ul {
+  .dropdown-content {
     position: relative;
     box-shadow: none;
     border: none;
   }
 
-  nav ul li ul li a {
+  .dropdown-content li a {
     padding-left: 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
   }
 }
