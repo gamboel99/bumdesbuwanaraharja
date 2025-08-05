@@ -1,140 +1,123 @@
-
 /* Reset dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+  background-color: #e0f7f7;
+  color: #333;
   line-height: 1.6;
+  padding-bottom: 80px;
 }
 
-/* Header / Banner */
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #006400;
-  padding: 1rem 2rem;
-  border-bottom: 5px solid red;
-  border-top: 5px solid yellow;
-}
-
-.banner img {
-  width: 70px;
-  height: auto;
-}
-
-.banner h1 {
-  font-size: 1.8rem;
-  color: white;
-  text-align: center;
-  flex-grow: 1;
-}
-
-/* Navbar */
-nav {
-  background-color: #228B22;
-  padding: 0.5rem 0;
-  border-bottom: 4px solid yellow;
-  border-top: 4px solid red;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  display: block;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: #006400;
-}
-
-/* Dropdown */
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #2e8b57;
-  border: 2px solid white;
-  z-index: 999;
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul li ul li {
-  width: 200px;
-}
-
-/* Kontainer Utama */
+/* Container utama */
 .container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: #e6f8f9;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bde2e4;
+}
+
+/* Judul utama */
+h1, h2 {
+  color: #0c6157;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Teks utama */
+p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+/* Teks miring atau status */
+.em {
+  font-style: italic;
+  color: #666;
+}
+
+/* Tanggal dan waktu */
+.date {
+  font-weight: bold;
+  color: #333;
 }
 
 /* Footer */
 footer {
-  background-color: #006400;
+  background-color: #003d2f;
   color: white;
-  padding: 1rem 2rem;
-  border-top: 4px solid red;
-  border-bottom: 4px solid yellow;
+  padding: 15px 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 0.9rem;
+  gap: 10px;
 }
 
-footer div {
-  flex: 1 1 30%;
+.footer-content div {
+  flex: 1;
+  text-align: center;
 }
 
-footer h4 {
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.25rem;
+/* Navigasi jika perlu */
+nav {
+  background-color: #003d2f;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
 }
 
-footer p, footer a {
+nav a {
   color: white;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
 }
 
-footer a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
-footer .credit {
-  text-align: center;
-  width: 100%;
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #ccc;
+/* Responsif */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
