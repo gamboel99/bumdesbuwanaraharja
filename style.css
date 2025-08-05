@@ -1,201 +1,140 @@
-/* Reset & Umum */
+
+/* Reset dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
   color: #222;
+  line-height: 1.6;
 }
 
-/* ======= HEADER ======= */
+/* Header / Banner */
 .banner {
-  background-color: #014421; /* Hijau tua */
-  color: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
-  border-bottom: 4px solid #ffd700; /* Kuning */
+  align-items: center;
+  background-color: #006400;
+  padding: 1rem 2rem;
+  border-bottom: 5px solid red;
+  border-top: 5px solid yellow;
 }
 
-.logo {
-  height: 70px;
+.banner img {
+  width: 70px;
+  height: auto;
 }
 
 .banner h1 {
-  flex: 1;
+  font-size: 1.8rem;
+  color: white;
   text-align: center;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  flex-grow: 1;
 }
 
-.banner h1 span {
-  display: block;
-  font-size: 1.2rem;
-  color: #ffcc00; /* Kuning */
-}
-
-/* ======= NAVIGATION ======= */
+/* Navbar */
 nav {
-  background-color: #fff;
-  border-bottom: 4px solid #d40000; /* Merah */
-  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  background-color: #228B22;
+  padding: 0.5rem 0;
+  border-bottom: 4px solid yellow;
+  border-top: 4px solid red;
 }
 
-.nav-menu {
+nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.nav-menu > li {
+nav ul li {
   position: relative;
 }
 
-.nav-menu > li > a {
+nav ul li a {
   display: block;
-  padding: 14px 20px;
-  color: #014421;
+  padding: 0.75rem 1rem;
   text-decoration: none;
+  color: white;
   font-weight: bold;
-  border-right: 1px solid #ddd;
+  transition: background-color 0.3s;
 }
 
-.nav-menu > li:last-child > a {
-  border-right: none;
+nav ul li a:hover {
+  background-color: #006400;
 }
 
-.nav-menu > li > a:hover {
-  background-color: #eaffea; /* Hijau terang lembut */
-}
-
-/* DROPDOWN */
-.dropdown-content {
+/* Dropdown */
+nav ul li ul {
   display: none;
   position: absolute;
-  background-color: white;
   top: 100%;
   left: 0;
-  min-width: 230px;
-  border: 1px solid #ccc;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #2e8b57;
+  border: 2px solid white;
+  z-index: 999;
 }
 
-.dropdown:hover .dropdown-content {
+nav ul li:hover ul {
   display: block;
 }
 
-.dropdown-content li a {
-  display: block;
-  padding: 10px 15px;
-  color: #014421;
-  font-weight: normal;
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
+nav ul li ul li {
+  width: 200px;
 }
 
-.dropdown-content li a:hover {
-  background-color: #eaffea;
-}
-
-/* ======= MAIN CONTENT ======= */
+/* Kontainer Utama */
 .container {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 25px;
-  background-color: white;
-  border: 3px solid #ffd700;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.welcome h2 {
-  color: #014421;
-  margin-bottom: 15px;
-}
-
-.welcome p {
-  line-height: 1.7;
-}
-
-/* ======= FOOTER ======= */
+/* Footer */
 footer {
-  background-color: #013015;
+  background-color: #006400;
   color: white;
-  padding: 30px 20px 15px;
-  border-top: 4px solid #ffd700;
+  padding: 1rem 2rem;
+  border-top: 4px solid red;
+  border-bottom: 4px solid yellow;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   font-size: 0.9rem;
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
+footer div {
+  flex: 1 1 30%;
 }
 
-.footer-content div {
-  flex: 1;
-  min-width: 250px;
-  margin-bottom: 10px;
+footer h4 {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.25rem;
 }
 
-.footer-content h3 {
-  color: #ffcc00;
-  margin-bottom: 10px;
+footer p, footer a {
+  color: white;
+  text-decoration: none;
 }
 
-.footer-bottom {
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .credit {
   text-align: center;
+  width: 100%;
+  margin-top: 1rem;
   font-size: 0.8rem;
-  border-top: 1px solid #444;
-  padding-top: 10px;
-}
-
-/* ======= RESPONSIVE ======= */
-@media screen and (max-width: 768px) {
-  .banner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .banner h1 {
-    font-size: 1.3rem;
-    margin: 10px 0;
-  }
-
-  .logo {
-    height: 60px;
-    margin: 5px;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-  }
-
-  .nav-menu > li > a {
-    border-right: none;
-    border-bottom: 1px solid #eee;
-  }
-
-  .dropdown-content {
-    position: relative;
-    box-shadow: none;
-    border: none;
-  }
-
-  .dropdown-content li a {
-    padding-left: 30px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
+  color: #ccc;
 }
