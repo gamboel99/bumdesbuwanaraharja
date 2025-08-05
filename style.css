@@ -1,66 +1,106 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BUMDes Buwana Raharja</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo-container">
-      <img src="logo_pemdes.png" alt="Logo Pemdes">
-    </div>
-    <div class="title-container">
-      <h1>Badan Usaha Milik Desa</h1>
-      <h2>BUMDes Buwana Raharja - Desa Keling</h2>
-    </div>
-    <div class="logo-container">
-      <img src="logo_bumdes.png" alt="Logo BUMDes">
-    </div>
-  </header>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fff4;
+  color: #333;
+}
 
-  <nav class="main-nav">
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li class="dropdown">
-        <a href="#">Profil</a>
-        <ul class="dropdown-content">
-          <li><a href="visi_misi.html">Visi & Misi</a></li>
-          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
-          <li><a href="program.html">Program Kerja</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Unit Usaha</a>
-        <ul class="dropdown-content">
-          <li><a href="unit_perdagangan.html">Perdagangan</a></li>
-          <li><a href="unit_jasa.html">Jasa Keuangan</a></li>
-          <li><a href="unit_air.html">Layanan Air Bersih</a></li>
-          <li><a href="unit_pariwisata.html">Pariwisata</a></li>
-          <li><a href="unit_persewaan.html">Persewaan Alat</a></li>
-        </ul>
-      </li>
-      <li><a href="agenda.html">Agenda</a></li>
-      <li><a href="dokumentasi.html">Dokumentasi</a></li>
-      <li><a href="berita.html">Berita</a></li>
-      <li><a href="kontak.html">Kontak & Pengaduan</a></li>
-    </ul>
-  </nav>
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #006400, #90ee90);
+  padding: 10px 20px;
+  border-bottom: 4px solid red;
+}
 
-  <main class="container">
-    <h2>Selamat Datang di Website Resmi</h2>
-    <p>Website ini berisi informasi seputar kegiatan dan layanan BUMDes Buwana Raharja Desa Keling.</p>
-  </main>
+.logo {
+  width: 80px;
+  height: auto;
+}
 
-  <footer class="site-footer">
-    <div>
-      <p><strong>Alamat:</strong> Desa Keling, Kec. [Isi Kecamatan], Kab. [Isi Kabupaten]</p>
-      <p><strong>Email:</strong> info@bumdesbuwana.id | <strong>Website:</strong> www.bumdesbuwana.id</p>
-      <p><strong>Telepon:</strong> 0821-xxxx-xxxx</p>
-      <p><strong>Media Sosial:</strong> Instagram @bumdes.buwana | Facebook: BUMDes Buwana Raharja</p>
-    </div>
-    <p class="developer">Developed by CV. Mitra Utama Consultindo</p>
-  </footer>
-</body>
-</html>
+.judul {
+  text-align: center;
+  color: white;
+}
+
+.judul h1 {
+  margin: 0;
+  font-size: 1.6em;
+}
+
+.judul h2 {
+  margin: 0;
+  font-size: 1em;
+  color: yellow;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #004d00;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #009900;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown-content li a {
+  color: #004d00;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main Container */
+.container {
+  padding: 20px;
+  background-color: white;
+  border: 3px solid red;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: #004d00;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 5px solid yellow;
+}
+
+.footer p {
+  margin: 5px 0;
+}
