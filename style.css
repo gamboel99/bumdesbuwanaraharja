@@ -1,73 +1,51 @@
-
-body {
+/* Reset dasar */
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #eaffea;
-  color: #003300;
-}
-
-header {
-  background-color: #006400;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header img {
-  height: 60px;
-}
-
-header h1 {
-  margin: 0 1rem;
-  flex-grow: 1;
-  text-align: center;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.navbar ul li {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  list-style: none;
   padding: 0;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  min-width: 180px;
+  box-sizing: border-box;
 }
 
-.dropdown-content li a {
-  display: block;
-  padding: 10px;
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid #ccc;
+/* Font dan body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Header/banner */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #006400, #00cc66); /* hijau tua ke terang */
+  padding: 10px 20px;
+  border-bottom: 5px solid #ffd700; /* garis kuning */
 }
 
+.banner img {
+  width: 80px;
+  height: auto;
+}
 
+.banner h1 {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Navigation bar */
 nav {
-  background-color: #008000;
+  background-color: #228b22;
+  padding: 0;
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul li {
@@ -76,58 +54,163 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  padding: 0.75rem 1.5rem;
-  color: white;
+  padding: 14px 20px;
   text-decoration: none;
+  color: white;
+  background-color: #228b22;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-nav ul li:hover {
-  background-color: #004d00;
+nav ul li:hover > a {
+  background-color: #006400;
 }
 
 nav ul li ul {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 48px;
   left: 0;
   background-color: #006400;
   min-width: 200px;
-  z-index: 999;
+  z-index: 1000;
+  border: 2px solid #ffd700;
+  border-top: none;
 }
 
 nav ul li:hover ul {
   display: block;
 }
 
-nav ul li ul li {
-  width: 100%;
+nav ul li ul li a {
+  padding: 12px;
+  color: #fff;
+  background-color: #006400;
 }
 
+nav ul li ul li a:hover {
+  background-color: #228b22;
+}
+
+/* Konten utama */
 .container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-top: 5px solid #ff0000; /* aksen merah */
 }
 
-.highlight-red {
-  color: #cc0000;
-  font-weight: bold;
+.container h2 {
+  margin-bottom: 20px;
+  color: #006400;
 }
 
-.banner-sub {
-  font-size: 1rem;
-  color: #ffff00; /* kuning */
-  text-align: center;
-  margin-top: -10px;
+.container p {
+  margin-bottom: 10px;
 }
 
+/* Footer */
 footer {
-  background-color: #004d00;
+  background-color: #006400;
   color: white;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 5px solid #ffd700;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .credit {
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffd700;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 15px;
+  background-color: #006400;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #228b22;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
 }
