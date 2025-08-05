@@ -115,13 +115,25 @@ nav {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.welcome h2 {
-  color: #014421;
-  margin-bottom: 15px;
+.section {
+  background-color: #f9f9f9;
+  border-left: 5px solid #006400;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.welcome p {
-  line-height: 1.7;
+.section h2 {
+  color: #014421;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #444;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
 /* ======= FOOTER ======= */
@@ -137,18 +149,32 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 30px;
   margin-bottom: 20px;
 }
 
 .footer-content div {
   flex: 1;
   min-width: 250px;
-  margin-bottom: 10px;
 }
 
 .footer-content h3 {
   color: #ffcc00;
   margin-bottom: 10px;
+}
+
+.footer-content p,
+.footer-content ul {
+  line-height: 1.6;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 8px;
 }
 
 .footer-bottom {
@@ -197,5 +223,6 @@ footer {
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 10px;
   }
 }
