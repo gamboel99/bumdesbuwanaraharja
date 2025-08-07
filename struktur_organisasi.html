@@ -1,38 +1,224 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Struktur Organisasi</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Struktur Organisasi - BUMDes Buwana Raharja</title>
+  <style>
+    /* RESET & DASAR */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f9fff9;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(to right, #007f3f, #a6ff91);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    header img.logo-kiri {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      height: 60px;
+    }
+    header img.logo-kanan {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      height: 60px;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #005f2f;
+    }
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .navbar > li {
+      position: relative;
+    }
+    .navbar > li > a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      background-color: #005f2f;
+    }
+    .navbar > li:hover > a {
+      background-color: #007f3f;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .dropdown-content li a {
+      padding: 10px 15px;
+      display: block;
+      color: #333;
+      background-color: white;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content li a:hover {
+      background-color: #eee;
+    }
+
+    /* KONTEN */
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    main h2 {
+      color: #007f3f;
+      margin-bottom: 20px;
+    }
+    .struktur-img {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+      border: 2px solid #007f3f;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #003f1a;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer p, footer a {
+      color: white;
+      font-size: 14px;
+    }
+    .footer-links {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="asset/logo_kiri.png" alt="Logo Kiri" />
+    <img src="asset/logo-kiri.png" alt="Logo Kiri" class="logo-kiri">
     <h1>BUMDes Buwana Raharja</h1>
-    <img src="asset/logo_kanan.png" alt="Logo Kanan" />
+    <img src="asset/logo-kanan.png" alt="Logo Kanan" class="logo-kanan">
   </header>
 
   <nav>
-    <a href="index.html">Beranda</a>
-    <a href="visi_misi.html">Visi Misi</a>
-    <a href="struktur_organisasi.html">Struktur Organisasi</a>
-    <a href="program_kerja.html">Program Kerja</a>
-    <!-- Tambahan menu lain jika diperlukan -->
+    <ul class="navbar">
+      <li class="dropdown">
+        <a href="#">Profil</a>
+        <ul class="dropdown-content">
+          <li><a href="sejarah.html">Sejarah</a></li>
+          <li><a href="visi_misi.html">Visi dan Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Unit Usaha</a>
+        <ul class="dropdown-content">
+          <li><a href="unit_pertanian.html">Pertanian</a></li>
+          <li><a href="unit_peternakan.html">Peternakan</a></li>
+          <li><a href="unit_perikanan.html">Perikanan</a></li>
+          <li><a href="unit_kerajinan.html">Kerajinan / Ekraf</a></li>
+          <li><a href="unit_fintech.html">Fintech</a></li>
+          <li><a href="unit_video.html">Video & Digital Editing</a></li>
+          <li><a href="unit_kuliner.html">Kuliner</a></li>
+          <li><a href="unit_atk.html">Toko ATK</a></li>
+          <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
+          <li><a href="program_sosial.html">Program Sosial</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
   </nav>
 
-  <div class="container">
-    <h2>Struktur Organisasi</h2>
-    <p>Berikut adalah struktur organisasi BUMDes...</p>
-  </div>
+  <main>
+    <h2>Struktur Organisasi BUMDes Buwana Raharja</h2>
+    <p>
+      BUMDes Buwana Raharja memiliki struktur organisasi yang terorganisir dengan baik untuk menjamin tata kelola yang transparan, profesional, dan akuntabel. Struktur ini disusun berdasarkan prinsip partisipatif, efisien, dan sesuai dengan ketentuan perundangan yang berlaku, serta disesuaikan dengan kebutuhan pengelolaan usaha desa yang kompleks dan beragam.
+    </p>
+
+    <p>
+      Susunan organisasi terdiri dari: <br>
+      • Dewan Pembina (Kepala Desa) <br>
+      • Pengawas (unsur masyarakat) <br>
+      • Direktur Utama BUMDes <br>
+      • Sekretaris dan Bendahara <br>
+      • Manajer Unit Usaha (Pertanian, Peternakan, Fintech, Ekraf, dll.)
+    </p>
+
+    <img src="asset/struktur_organisasi.png" alt="Struktur Organisasi BUMDes" class="struktur-img">
+
+    <p>
+      Setiap elemen dalam struktur organisasi BUMDes Buwana Raharja memiliki peran yang saling melengkapi. Dewan pembina bertugas mengarahkan dan memberikan legitimasi kebijakan, pengawas mengontrol kinerja, sedangkan direktur menjalankan fungsi operasional dibantu oleh sekretaris, bendahara, dan manajer unit usaha. Kolaborasi antar bagian ini memungkinkan terwujudnya pengelolaan usaha desa yang berkelanjutan dan berdampak nyata bagi masyarakat.
+    </p>
+  </main>
 
   <footer>
-    <p><strong>Alamat:</strong> Jl. Raya Keling, Bukaan, Keling, Kec. Kepung, Kabupaten Kediri, Jawa Timur 64293</p>
-    <p><strong>Email:</strong> info@buwanaraharja.id | <strong>Website:</strong> www.buwanaraharja.id</p>
-    <p><strong>Media Sosial:</strong> Facebook | Instagram | Twitter</p>
-    <p><strong>Pintasan Cepat:</strong> Beranda | Visi Misi | Program Kerja | Kontak</p>
-    <p style="text-align:center; margin-top:10px;">&copy; 2025 BUMDes Buwana Raharja. All rights reserved.</p>
+    <p>&copy; 2025 BUMDes Buwana Raharja | Jl. Raya Keling, Bukaan, Keling, Kec. Kepung, Kab. Kediri, Jawa Timur 64293</p>
+    <div class="footer-links">
+      <p>Email: bumdes.keling@gmail.com | Website: www.bumdesbuwanaraharja.id</p>
+      <p>Instagram: @buwanaraharja | YouTube: BUMDes Buwana TV</p>
+    </div>
   </footer>
+
 </body>
 </html>
