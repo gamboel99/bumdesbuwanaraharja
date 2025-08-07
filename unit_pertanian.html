@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unit Pertanian - BUMDes Buwana Raharja</title>
+  <style>
+    /* Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .banner {
+      background: linear-gradient(to right, #0e5cad, #4da1ff);
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .banner h1 {
+      text-align: center;
+      flex: 1;
+      font-size: 24px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    nav {
+      background-color: #0e5cad;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar > li {
+      position: relative;
+    }
+
+    .navbar > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar > li:hover > a {
+      background-color: #0a4b91;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content li a {
+      color: #333;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #0e5cad;
+    }
+
+    .container p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #0e5cad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer hr {
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #ffffff33;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
+    <h1>BUMDes Buwana Raharja</h1>
+    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
+  </header>
+
+  <nav>
+    <ul class="navbar">
+      <li class="dropdown">
+        <a href="#">Profil</a>
+        <ul class="dropdown-content">
+          <li><a href="sejarah.html">Sejarah</a></li>
+          <li><a href="visi_misi.html">Visi dan Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Unit Usaha</a>
+        <ul class="dropdown-content">
+          <li><a href="unit_pertanian.html">Pertanian</a></li>
+          <li><a href="unit_peternakan.html">Peternakan</a></li>
+          <li><a href="unit_perikanan.html">Perikanan</a></li>
+          <li><a href="unit_kerajinan.html">Kerajinan / Ekraf</a></li>
+          <li><a href="unit_fintech.html">Fintech</a></li>
+          <li><a href="unit_video.html">Video & Digital Editing</a></li>
+          <li><a href="unit_kuliner.html">Kuliner</a></li>
+          <li><a href="unit_atk.html">Toko ATK</a></li>
+          <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
+          <li><a href="program_sosial.html">Program Sosial</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Unit Usaha Pertanian</h2>
+    <p>Unit Pertanian BUMDes Buwana Raharja merupakan salah satu pilar utama dalam menggerakkan ekonomi berbasis potensi lokal desa Keling. Unit ini dikembangkan sejak awal pendirian BUMDes pada tahun 2018, berfokus pada optimalisasi lahan-lahan produktif dan peningkatan hasil pertanian masyarakat melalui pendekatan teknologi dan kelembagaan modern.</p>
+
+    <p><strong>Konsep:</strong> Unit Pertanian dijalankan dengan model kolaboratif antara petani, kelompok tani, dan pengelola BUMDes. Kegiatan utamanya meliputi pengadaan bibit unggul, pupuk bersubsidi, pelatihan pertanian modern, hingga sistem pemasaran berbasis digital (e-commerce hasil panen).</p>
+
+    <p><strong>Lini Bisnis:</strong> Pengelolaan lahan pertanian milik desa, distribusi sarana produksi pertanian, usaha penggilingan padi mini, dan pengemasan produk olahan seperti beras organik dan hasil hortikultura segar.</p>
+
+    <p><strong>Keunggulan:</strong> Akses langsung ke pasar lokal dan regional, dukungan teknologi irigasi tetes dan pertanian presisi, serta sinergi dengan dinas pertanian daerah. Produk hasil panen diberi label "BUMDes Organik Keling" sebagai brand lokal berkualitas.</p>
+
+    <p><strong>Manfaat & Peluang:</strong> Memberikan peluang kerja kepada petani muda, meningkatkan pendapatan keluarga tani, dan mendukung ketahanan pangan desa. Potensi ekspansi usaha meliputi ekspor hasil organik dan agro-wisata edukatif di masa mendatang.</p>
+  </main>
+
+  <footer>
+    <p>Alamat: Jl. Raya Keling, Bukaan, Keling, Kec. Kepung, Kabupaten Kediri, Jawa Timur 64293</p>
+    <p>Email: bumdesbuwana@example.com | Website: www.bumdesbuwanaraharja.desa.id</p>
+    <p>Follow us: Instagram | Facebook | YouTube</p>
+    <hr>
+    <p>Developed by <strong>CV. Mitra Utama Consultindo</strong></p>
+  </footer>
+</body>
+</html>
