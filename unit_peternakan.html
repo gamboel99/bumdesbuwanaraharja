@@ -14,91 +14,143 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f4f4f4;
+      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
       line-height: 1.6;
       color: #333;
     }
 
-    header {
-      background-color: #00695c;
+    .banner {
+      background: linear-gradient(to right, #0e5cad, #4da1ff);
       color: white;
-      padding: 10px 0;
-      text-align: center;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    header img {
-      height: 60px;
-      vertical-align: middle;
+    .banner h1 {
+      text-align: center;
+      flex: 1;
+      font-size: 24px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
     }
 
     nav {
-      background-color: #004d40;
+      background-color: #0e5cad;
     }
 
     .navbar {
-      list-style-type: none;
+      list-style: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    .navbar li {
+    .navbar > li {
       position: relative;
     }
 
-    .navbar a {
+    .navbar > li > a {
       display: block;
-      padding: 14px 20px;
+      padding: 15px 20px;
       color: white;
       text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
-    .navbar a:hover {
-      background-color: #00796b;
+    .navbar > li:hover > a {
+      background-color: #0a4b91;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #004d40;
-      min-width: 180px;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
     .dropdown-content li a {
+      color: #333;
       padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f0f0f0;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    main {
-      padding: 20px;
+    .container {
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
       background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #0e5cad;
+    }
+
+    .container p {
+      margin-bottom: 15px;
+      text-align: justify;
     }
 
     footer {
-      background-color: #eeeeee;
-      color: #333;
+      background-color: #0e5cad;
+      color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 30px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
 
     footer hr {
       margin: 10px auto;
       width: 80%;
+      border: 1px solid #ffffff33;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo_kiri.png" alt="Logo Kiri" />
-    <span style="font-size: 24px; margin: 0 20px;">BUMDes Buwana Raharja</span>
-    <img src="logo_kanan.png" alt="Logo Kanan" />
+  <header class="banner">
+    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
+    <h1>BUMDes Buwana Raharja</h1>
+    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
   </header>
 
   <nav>
@@ -162,26 +214,17 @@
     </ul>
   </nav>
 
-  <main>
-    <h1>Unit Peternakan</h1>
-    <p>
-      Unit Peternakan BUMDes Buwana Raharja dikembangkan berdasarkan potensi lokal berupa lahan desa yang luas dan kondisi lingkungan yang mendukung kegiatan peternakan. Unit ini berfokus pada pengelolaan ternak kambing, sapi, dan ayam petelur dengan pendekatan berbasis teknologi dan pemberdayaan masyarakat sekitar.
-    </p>
-    <h2>Konsep dan Lini Bisnis</h2>
-    <p>
-      Konsep usaha peternakan dirancang sebagai agribisnis modern berbasis integrasi: mulai dari pembibitan, pakan ternak lokal, penggemukan, hingga pemasaran hasil ternak seperti daging, telur, dan pupuk organik dari limbah ternak. Kemitraan dengan pelaku pasar lokal dan pelatihan rutin menjadi kunci penguatan sistem ini.
-    </p>
-    <h2>Keunggulan</h2>
-    <ul>
-      <li>Menggunakan pakan alami berbasis hijauan lokal</li>
-      <li>Penerapan kandang komunal yang efisien</li>
-      <li>Sistem distribusi hasil ternak melalui koperasi dan warung desa</li>
-      <li>Tenaga kerja dari masyarakat setempat</li>
-    </ul>
-    <h2>Manfaat dan Peluang bagi Masyarakat</h2>
-    <p>
-      Unit ini memberikan peluang kerja langsung sebagai peternak dan pengelola kandang. Selain itu, masyarakat juga dapat memperoleh manfaat dari pelatihan teknis, akses bibit unggul, serta peluang pemasaran bersama. Hasil usaha ini juga mendukung ketahanan pangan hewani desa secara berkelanjutan.
-    </p>
+  <main class="container">
+    <h2>Unit Usaha Peternakan</h2>
+    <p>Unit Peternakan BUMDes Buwana Raharja dikembangkan sebagai langkah strategis untuk meningkatkan ketahanan pangan dan mendayagunakan sumber daya desa, terutama ketersediaan lahan, hijauan pakan ternak, dan minat masyarakat dalam beternak. Unit ini dirancang untuk menjadi tulang punggung ekonomi alternatif bagi masyarakat Desa Keling.</p>
+
+    <p><strong>Konsep:</strong> Peternakan dijalankan secara kolektif dalam model klaster ternak berbasis kelompok warga, didukung fasilitas kandang komunal, bank pakan, serta monitoring kesehatan hewan. Teknologi dan pelatihan diberikan secara berkelanjutan.</p>
+
+    <p><strong>Lini Bisnis:</strong> Penggemukan sapi dan kambing, budidaya ayam petelur, produksi pakan mandiri, serta penjualan kotoran ternak sebagai pupuk organik. Selain itu, dibuka jasa aqiqah dan pengolahan daging skala rumah tangga.</p>
+
+    <p><strong>Keunggulan:</strong> Sistem manajemen berbasis data ternak, kemitraan dengan koperasi konsumen dan rumah potong hewan lokal, serta produk ternak sehat dan halal dengan branding lokal Desa Keling.</p>
+
+    <p><strong>Manfaat & Peluang:</strong> Membuka lapangan kerja baru, mendorong kemandirian pangan hewani, serta meningkatkan kesejahteraan peternak kecil. Potensi ke depan termasuk sertifikasi organik dan pembukaan agrowisata edukasi ternak.</p>
   </main>
 
   <footer>
