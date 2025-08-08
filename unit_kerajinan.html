@@ -5,151 +5,226 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unit Kerajinan dan Ekonomi Kreatif - BUMDes Buwana Raharja</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    /* Reset dasar */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    header {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .banner {
       background: linear-gradient(to right, #0e5cad, #4da1ff);
       color: white;
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
     }
 
-    header img {
-      height: 60px;
+    .banner h1 {
+      text-align: center;
+      flex: 1;
+      font-size: 24px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
     }
 
     nav {
-      background-color: #003366;
+      background-color: #0e5cad;
     }
 
     .navbar {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar li {
-      position: relative;
+      justify-content: center;
     }
 
     .navbar > li {
-      flex: 1;
+      position: relative;
     }
 
-    .navbar a {
+    .navbar > li > a {
       display: block;
-      padding: 14px 16px;
+      padding: 15px 20px;
       color: white;
       text-decoration: none;
-      text-align: center;
+      transition: background-color 0.3s ease;
     }
 
-    .navbar li:hover {
-      background-color: #0059b3;
+    .navbar > li:hover > a {
+      background-color: #0a4b91;
     }
 
-    .navbar li ul {
+    .dropdown-content {
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 160px;
+      min-width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
-    .navbar li:hover ul {
+    .dropdown-content li a {
+      color: #333;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    .navbar li ul li a {
-      color: black;
-      padding: 12px 16px;
-      text-align: left;
-    }
-
-    .navbar li ul li a:hover {
-      background-color: #ddd;
-    }
-
-    main.container {
-      padding: 20px;
+    .container {
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #0e5cad;
+    }
+
+    .container p {
+      margin-bottom: 15px;
+      text-align: justify;
     }
 
     footer {
-      background-color: #003366;
+      background-color: #0e5cad;
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
 
     footer hr {
-      border: 0.5px solid #fff;
-      margin: 10px 0;
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #ffffff33;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo-kiri.png" alt="Logo Kiri">
+  <header class="banner">
+    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
     <h1>BUMDes Buwana Raharja</h1>
-    <img src="logo-kanan.png" alt="Logo Kanan">
+    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
   </header>
 
   <nav>
     <ul class="navbar">
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="#">Profil</a>
-        <ul>
+      <li class="dropdown">
+        <a href="#">Profil</a>
+        <ul class="dropdown-content">
           <li><a href="sejarah.html">Sejarah</a></li>
-          <li><a href="visi_misi.html">Visi & Misi</a></li>
-          <li><a href="struktur.html">Struktur Organisasi</a></li>
+          <li><a href="visi_misi.html">Visi dan Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
         </ul>
       </li>
-      <li><a href="#">Unit Usaha</a>
-        <ul>
+      <li class="dropdown">
+        <a href="#">Unit Usaha</a>
+        <ul class="dropdown-content">
           <li><a href="unit_pertanian.html">Pertanian</a></li>
           <li><a href="unit_peternakan.html">Peternakan</a></li>
           <li><a href="unit_perikanan.html">Perikanan</a></li>
-          <li><a href="unit_kerajinan.html">Kerajinan & Ekraf</a></li>
-          <!-- Tambahan unit lainnya -->
+          <li><a href="unit_kerajinan.html">Kerajinan / Ekraf</a></li>
+          <li><a href="unit_fintech.html">Fintech</a></li>
+          <li><a href="unit_video.html">Video & Digital Editing</a></li>
+          <li><a href="unit_kuliner.html">Kuliner</a></li>
+          <li><a href="unit_atk.html">Toko ATK</a></li>
+          <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
         </ul>
       </li>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
+          <li><a href="program_sosial.html">Program Sosial</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
       <li><a href="kontak.html">Kontak</a></li>
     </ul>
   </nav>
 
   <main class="container">
     <h2>Unit Kerajinan dan Ekonomi Kreatif</h2>
-    <p>
-      Unit Kerajinan dan Ekonomi Kreatif (Ekraf) BUMDes Buwana Raharja adalah bentuk pemberdayaan masyarakat dalam mengolah potensi seni, budaya, dan keterampilan lokal menjadi produk bernilai ekonomi tinggi. Unit ini mendorong masyarakat desa untuk memproduksi barang-barang kreatif seperti anyaman bambu, kerajinan tangan dari limbah daur ulang, souvenir desa, hingga produk fashion etnik.
-    </p>
-    <p>
-      Konsep pengembangan unit ini didasarkan pada prinsip penguatan ekonomi lokal melalui inovasi dan identitas budaya desa. BUMDes menyediakan pelatihan desain, pemasaran digital, dan fasilitasi kemitraan dengan pelaku industri kreatif di luar daerah.
-    </p>
-    <p>
-      Lini bisnis unit ini meliputi:
-      <ul>
-        <li>Produksi kerajinan tangan</li>
-        <li>Pemasaran souvenir desa</li>
-        <li>Pelatihan keterampilan kreatif</li>
-        <li>Pengembangan produk lokal berkelanjutan</li>
-      </ul>
-    </p>
-    <p>
-      Keunggulan unit ini adalah kekhasan produk yang berbasis budaya lokal, nilai estetika yang tinggi, serta potensi pasar yang luas baik secara offline maupun online. Produk yang dihasilkan memiliki daya saing sebagai oleh-oleh khas desa.
-    </p>
-    <p>
-      Manfaat dan peluang yang ditawarkan unit ini mencakup peningkatan pendapatan keluarga, pembukaan lapangan kerja kreatif bagi pemuda desa, serta penguatan branding desa di mata wisatawan. Potensi ini semakin besar dengan adanya tren peningkatan permintaan terhadap produk ramah lingkungan dan berbasis kearifan lokal.
-    </p>
+    <p>Unit Kerajinan dan Ekonomi Kreatif BUMDes Buwana Raharja hadir untuk mengembangkan potensi seni dan keterampilan masyarakat desa Keling. Unit ini berfokus pada pengolahan bahan lokal menjadi produk bernilai ekonomi tinggi yang dapat dipasarkan secara luas.</p>
+
+    <p><strong>Konsep:</strong> Mengangkat budaya dan kearifan lokal melalui produk kerajinan tangan seperti anyaman bambu, batik tulis khas desa, produk ecoprint, dan kriya kreatif berbasis daur ulang.</p>
+
+    <p><strong>Lini Bisnis:</strong> Produksi kerajinan, galeri dan toko oleh-oleh desa, pelatihan dan workshop kriya, serta kolaborasi dengan UMKM dan seniman lokal untuk produksi bersama dan penjualan digital.</p>
+
+    <p><strong>Keunggulan:</strong> Produk unik dan handmade yang tidak tersedia di pasar umum, berbasis warisan budaya, serta ramah lingkungan. Didukung oleh jaringan pemasaran online dan offline, termasuk e-commerce desa.</p>
+
+    <p><strong>Manfaat & Peluang:</strong> Menyerap tenaga kerja kreatif, membuka pasar wisatawan dan kolektor, serta menjadi sarana ekspresi seni lokal. Potensi berkembang ke pasar ekspor dan menjadi identitas unggulan Desa Keling.</p>
   </main>
 
   <footer>
