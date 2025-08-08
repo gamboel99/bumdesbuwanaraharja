@@ -3,66 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unit Perikanan - BUMDes Buwana Raharja</title>
+  <title>Unit Usaha Perikanan - BUMDes Buwana Raharja</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background-color: #f8f9fa;
-      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
     }
 
     header {
       background-color: #003366;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
     }
 
     nav {
-      background-color: #0055a5;
+      background-color: #004080;
     }
 
     .navbar {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      margin: 0;
+      padding: 0;
     }
 
-    .navbar li {
+    .navbar > li {
       position: relative;
     }
 
-    .navbar a {
+    .navbar > li > a {
       display: block;
-      padding: 15px 20px;
+      padding: 14px 20px;
       color: white;
       text-decoration: none;
     }
 
-    .navbar li:hover {
-      background-color: #003f7f;
+    .navbar > li:hover {
+      background-color: #0059b3;
     }
 
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #0055a5;
+      background-color: white;
       min-width: 200px;
       z-index: 1;
-      top: 50px;
     }
 
-    .dropdown-content a {
+    .dropdown-content li a {
+      color: #003366;
       padding: 12px 16px;
       display: block;
+      text-decoration: none;
     }
 
     .dropdown:hover .dropdown-content {
@@ -70,9 +71,11 @@
     }
 
     main {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 30px 20px;
+      background-color: white;
+      max-width: 900px;
+      margin: 30px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -80,84 +83,103 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      font-size: 14px;
     }
 
     footer hr {
-      border: 0;
-      border-top: 1px solid #999;
       margin: 10px 0;
+      border: 0;
+      border-top: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
-
   <header>
+    <img src="logo-kiri.png" alt="Logo Kiri">
     <h1>BUMDes Buwana Raharja</h1>
-    <p>Unit Usaha Perikanan</p>
+    <img src="logo-kanan.png" alt="Logo Kanan">
   </header>
 
   <nav>
     <ul class="navbar">
-      <li><a href="index.html">Beranda</a></li>
       <li class="dropdown">
         <a href="#">Profil</a>
-        <div class="dropdown-content">
-          <a href="visi_misi.html">Visi & Misi</a>
-          <a href="sejarah.html">Sejarah</a>
-          <a href="struktur_organisasi.html">Struktur Organisasi</a>
-          <a href="program_kerja.html">Program Kerja</a>
-        </div>
+        <ul class="dropdown-content">
+          <li><a href="sejarah.html">Sejarah</a></li>
+          <li><a href="visi_misi.html">Visi dan Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
+        </ul>
       </li>
       <li class="dropdown">
         <a href="#">Unit Usaha</a>
-        <div class="dropdown-content">
-          <a href="unit_perdagangan.html">Perdagangan Umum</a>
-          <a href="unit_toko.html">Usaha Toko Desa</a>
-          <a href="unit_air.html">Layanan Air Bersih</a>
-          <a href="unit_sampah.html">Pengelolaan Sampah</a>
-          <a href="unit_pertanian.html">Pertanian</a>
-          <a href="unit_peternakan.html">Peternakan</a>
-          <a href="unit_perikanan.html">Perikanan</a>
-          <a href="unit_persewaan.html">Persewaan Alat</a>
-          <a href="unit_keuangan.html">Jasa Keuangan Mikro</a>
-          <a href="unit_wisata.html">Wisata Desa</a>
-          <a href="unit_kuliner.html">Warung Kuliner</a>
-          <a href="unit_kerajinan.html">Kerajinan Tangan</a>
-          <a href="unit_digital.html">Keuangan Digital & Web</a>
-          <a href="unit_video.html">Video Shooting & Editing</a>
-        </div>
+        <ul class="dropdown-content">
+          <li><a href="unit_pertanian.html">Pertanian</a></li>
+          <li><a href="unit_peternakan.html">Peternakan</a></li>
+          <li><a href="unit_perikanan.html">Perikanan</a></li>
+          <li><a href="unit_kerajinan.html">Kerajinan / Ekraf</a></li>
+          <li><a href="unit_fintech.html">Fintech</a></li>
+          <li><a href="unit_video.html">Video & Digital Editing</a></li>
+          <li><a href="unit_kuliner.html">Kuliner</a></li>
+          <li><a href="unit_atk.html">Toko ATK</a></li>
+          <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
+        </ul>
       </li>
-      <li><a href="dokumentasi.html">Dokumentasi</a></li>
-      <li><a href="laporan.html">Laporan</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
+          <li><a href="program_sosial.html">Program Sosial</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
       <li><a href="pengaduan.html">Pengaduan</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
     </ul>
   </nav>
 
   <main>
     <h2>Unit Usaha Perikanan</h2>
     <p>
-      Unit Perikanan BUMDes Buwana Raharja dikembangkan sebagai bagian dari strategi pemberdayaan potensi perairan lokal dan peningkatan ketahanan pangan berbasis desa. Unit ini berfokus pada budidaya ikan air tawar, seperti lele, nila, dan gurame, yang memiliki permintaan tinggi di pasar lokal maupun regional.
+      Unit Usaha Perikanan BUMDes Buwana Raharja merupakan wujud pemanfaatan potensi sumber daya air dan perairan yang ada di Desa Keling dan sekitarnya. Berbasis pada pendekatan ekonomi lokal, unit ini bertujuan untuk menciptakan kemandirian pangan melalui budidaya ikan air tawar, serta mengembangkan ekosistem bisnis perikanan yang profesional dan berkelanjutan.
     </p>
-    <h3>Konsep</h3>
     <p>
-      Konsep dasar unit ini adalah memanfaatkan lahan dan sumber air yang tersedia di wilayah desa sebagai kolam atau tambak, kemudian dikelola secara profesional dan berkelanjutan. Program ini juga melibatkan kelompok pemuda dan warga setempat sebagai pelaku utama, sehingga meningkatkan keterlibatan masyarakat dalam pembangunan ekonomi.
+      Konsep usaha yang dijalankan mencakup kegiatan pembenihan, pembesaran, hingga pemasaran ikan konsumsi seperti lele, nila, dan gurame. Selain itu, dilakukan pula integrasi dengan sektor pertanian dan peternakan melalui pemanfaatan limbah sebagai pakan atau pupuk organik.
     </p>
-
-    <h3>Lini Bisnis</h3>
     <p>
-      Lini bisnis utama meliputi: produksi bibit ikan, budidaya dan pembesaran, panen dan distribusi hasil perikanan. Selain itu, unit ini juga menjajaki usaha pengolahan hasil perikanan seperti abon ikan, nugget ikan, dan produk olahan lainnya sebagai diversifikasi usaha.
+      Lini bisnis utama dari unit perikanan meliputi: budidaya kolam ikan skala rumah tangga, penjualan bibit ikan unggul, pelatihan teknis budidaya ikan, serta kerja sama distribusi hasil panen dengan pasar lokal dan luar daerah.
     </p>
-
-    <h3>Keunggulan</h3>
     <p>
-      Keunggulan unit perikanan terletak pada dukungan lingkungan yang mendukung budidaya air tawar, teknologi pemeliharaan yang hemat pakan dan ramah lingkungan, serta manajemen kolam berbasis komunitas. Unit ini juga mampu memberikan keuntungan secara berkelanjutan dengan siklus panen yang teratur.
+      Keunggulan unit ini terletak pada penggunaan teknologi sederhana dan efisien, dukungan kelembagaan dari BUMDes, serta potensi air dan tanah desa yang sangat mendukung kegiatan perikanan. Kegiatan ini juga dilengkapi dengan pelatihan dan pendampingan rutin bagi kelompok pembudidaya pemula.
     </p>
-
-    <h3>Manfaat dan Peluang</h3>
     <p>
-      Manfaat dari unit ini antara lain membuka lapangan kerja lokal, mengurangi ketergantungan pada pasokan ikan luar desa, serta menjadi model edukasi perikanan desa. Peluang lainnya adalah pengembangan kolaborasi dengan sekolah atau lembaga pelatihan serta pembukaan pasar digital untuk hasil panen.
+      Manfaat dan peluang ekonomi yang diciptakan mencakup peningkatan pendapatan warga, pengurangan angka pengangguran, penyediaan bahan pangan bergizi secara mandiri, serta pembukaan jalur usaha baru di bidang pengolahan hasil ikan seperti abon, keripik ikan, dan pakan ikan lokal.
+    </p>
+    <p>
+      Secara umum, Unit Usaha Perikanan ini dibangun berdasarkan potensi air yang melimpah dari sumber alam desa serta kebutuhan pasar yang terus meningkat terhadap produk ikan segar. BUMDes melihat sektor ini sebagai peluang strategis dalam menciptakan ketahanan pangan sekaligus lapangan kerja baru.
     </p>
   </main>
 
@@ -168,6 +190,5 @@
     <hr>
     <p>Developed by <strong>CV. Mitra Utama Consultindo</strong></p>
   </footer>
-
 </body>
 </html>
