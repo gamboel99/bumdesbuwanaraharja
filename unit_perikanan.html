@@ -3,52 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unit Perikanan - BUMDes Buwana Raharja</title>
+  <title>Unit Kerajinan / Ekraf - BUMDes Buwana Raharja</title>
   <style>
-    /* Reset dasar */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
-      line-height: 1.6;
-      color: #333;
+      margin: 0;
+      padding: 0;
     }
 
-    .banner {
-      background: linear-gradient(to right, #0e5cad, #4da1ff);
+    header {
+      background-color: #003366;
       color: white;
-      padding: 20px;
+      padding: 10px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
-    .banner h1 {
-      text-align: center;
-      flex: 1;
-      font-size: 24px;
-    }
-
-    .logo {
-      width: 60px;
-      height: auto;
+    header img {
+      height: 50px;
     }
 
     nav {
-      background-color: #0e5cad;
+      background-color: #0066cc;
     }
 
     .navbar {
       list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
     }
 
     .navbar > li {
@@ -60,11 +44,10 @@
       padding: 15px 20px;
       color: white;
       text-decoration: none;
-      transition: background-color 0.3s ease;
     }
 
-    .navbar > li:hover > a {
-      background-color: #0a4b91;
+    .navbar li:hover {
+      background-color: #005bb5;
     }
 
     .dropdown-content {
@@ -72,85 +55,46 @@
       position: absolute;
       background-color: white;
       min-width: 200px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
     .dropdown-content li a {
-      color: #333;
+      color: black;
       padding: 12px 16px;
-      display: block;
       text-decoration: none;
-    }
-
-    .dropdown-content li a:hover {
-      background-color: #f0f0f0;
+      display: block;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    .container {
-      padding: 40px 20px;
+    main {
+      padding: 20px;
       max-width: 900px;
       margin: auto;
-      background-color: white;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .container h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #0e5cad;
-    }
-
-    .container p {
-      margin-bottom: 15px;
-      text-align: justify;
     }
 
     footer {
-      background-color: #0e5cad;
+      background-color: #003366;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer p {
-      margin: 5px 0;
+      font-size: 14px;
     }
 
     footer hr {
       margin: 10px auto;
       width: 80%;
-      border: 1px solid #ffffff33;
-    }
-
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-      }
-
-      .banner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .logo {
-        margin-bottom: 10px;
-      }
     }
   </style>
 </head>
 <body>
-  <header class="banner">
-    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
+
+  <header>
+    <img src="logo_kiri.png" alt="Logo Kiri">
     <h1>BUMDes Buwana Raharja</h1>
-    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
+    <img src="logo_kanan.png" alt="Logo Kanan">
   </header>
 
   <nav>
@@ -214,25 +158,7 @@
     </ul>
   </nav>
 
-  <main class="container">
-    <h2>Unit Usaha Perikanan</h2>
-    <p>Unit Perikanan BUMDes Buwana Raharja hadir untuk memanfaatkan potensi air dan kolam yang tersebar di Desa Keling, sebagai solusi penyediaan protein ikan sekaligus sumber ekonomi baru bagi warga desa.</p>
-
-    <p><strong>Konsep:</strong> Sistem perikanan terpadu dengan model bioflok dan kolam tanah untuk budidaya ikan lele, nila, dan patin. Dilengkapi pelatihan dan pendampingan teknis, serta sistem kemitraan hasil panen.</p>
-
-    <p><strong>Lini Bisnis:</strong> Budidaya ikan konsumsi, produksi benih, penjualan pakan alternatif, pengolahan hasil perikanan (abon lele, bakso ikan), serta pemasaran langsung melalui e-commerce lokal BUMDes.</p>
-
-    <p><strong>Keunggulan:</strong> Memanfaatkan sumber daya air desa, sistem budidaya hemat lahan dan ramah lingkungan, teknologi bioflok, serta jaminan pasar dari mitra rumah makan dan pasar tradisional.</p>
-
-    <p><strong>Manfaat & Peluang:</strong> Menumbuhkan wirausaha perikanan, menyediakan gizi keluarga, dan membuka peluang kerja pemuda desa. Ke depan, dikembangkan wisata edukasi perikanan dan ekspor produk olahan.</p>
-  </main>
-
-  <footer>
-    <p>Alamat: Jl. Raya Keling, Bukaan, Keling, Kec. Kepung, Kabupaten Kediri, Jawa Timur 64293</p>
-    <p>Email: bumdesbuwana@example.com | Website: www.bumdesbuwanaraharja.desa.id</p>
-    <p>Follow us: Instagram | Facebook | YouTube</p>
-    <hr>
-    <p>Developed by <strong>CV. Mitra Utama Consultindo</strong></p>
-  </footer>
-</body>
-</html>
+  <main>
+    <h2>Unit Usaha Kerajinan dan Ekonomi Kreatif</h2>
+    <p>
+      Unit Kerajinan dan
