@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unit Video Editing - BUMDes Buwana Raharja</title>
+  <title>Unit Video & Digital Editing - BUMDes Buwana Raharja</title>
   <style>
+    /* Reset dasar */
     * {
       margin: 0;
       padding: 0;
@@ -13,51 +14,57 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
       background-color: #f4f4f4;
+      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
+      line-height: 1.6;
+      color: #333;
     }
 
-    header {
-      background-color: #003366;
-      color: #fff;
+    .banner {
+      background: linear-gradient(to right, #0e5cad, #4da1ff);
+      color: white;
       padding: 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
-    header img {
-      height: 60px;
+    .banner h1 {
+      text-align: center;
+      flex: 1;
+      font-size: 24px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
     }
 
     nav {
-      background-color: #0055a5;
+      background-color: #0e5cad;
     }
 
     .navbar {
       list-style: none;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-    }
-
-    .navbar li {
-      position: relative;
+      justify-content: center;
     }
 
     .navbar > li {
-      margin: 0 10px;
+      position: relative;
     }
 
-    .navbar a {
+    .navbar > li > a {
       display: block;
       padding: 15px 20px;
       color: white;
       text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
-    .navbar a:hover {
-      background-color: #003f7d;
+    .navbar > li:hover > a {
+      background-color: #0a4b91;
     }
 
     .dropdown-content {
@@ -65,60 +72,85 @@
       position: absolute;
       background-color: white;
       min-width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
     .dropdown-content li a {
-      color: #0055a5;
+      color: #333;
       padding: 12px 16px;
+      display: block;
+      text-decoration: none;
     }
 
     .dropdown-content li a:hover {
-      background-color: #ddd;
+      background-color: #f0f0f0;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    main {
-      padding: 20px;
-      background: white;
-      max-width: 1000px;
-      margin: 20px auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #0e5cad;
+    }
+
+    .container p {
+      margin-bottom: 15px;
+      text-align: justify;
     }
 
     footer {
-      background-color: #003366;
-      color: #fff;
+      background-color: #0e5cad;
+      color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
 
+    footer p {
+      margin: 5px 0;
+    }
+
     footer hr {
-      margin: 10px 0;
-      border: 0;
-      border-top: 1px solid #fff;
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #ffffff33;
     }
 
-    h1 {
-      margin-bottom: 20px;
-      color: #003366;
-    }
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
 
-    p {
-      margin-bottom: 16px;
-      text-align: justify;
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo_kiri.png" alt="Logo Kiri">
+  <header class="banner">
+    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
     <h1>BUMDes Buwana Raharja</h1>
-    <img src="logo_kanan.png" alt="Logo Kanan">
+    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
   </header>
 
   <nav>
@@ -145,25 +177,54 @@
           <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
         </ul>
       </li>
-      <li><a href="berita.html">Berita</a></li>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
+          <li><a href="program_sosial.html">Program Sosial</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
       <li><a href="kontak.html">Kontak</a></li>
     </ul>
   </nav>
 
-  <main>
-    <h1>Unit Video Shooting & Editing</h1>
-    <p>
-      Unit usaha Video Shooting & Editing BUMDes Buwana Raharja hadir untuk memenuhi kebutuhan masyarakat dalam mendokumentasikan berbagai momen penting seperti pernikahan, seminar, pelatihan, kegiatan desa, dan promosi usaha. Dengan dukungan peralatan modern dan tenaga kreatif lokal, unit ini mampu memberikan hasil dokumentasi yang profesional dan menarik.
-    </p>
-    <p>
-      Konsep usaha ini mengedepankan pelayanan digital berbasis kebutuhan desa dan UMKM, dengan lini bisnis meliputi jasa pembuatan video promosi, dokumentasi acara, editing konten digital, dan layanan desain visual kreatif. Ini membuka peluang sinergi dengan komunitas konten kreator lokal serta lembaga pendidikan.
-    </p>
-    <p>
-      Keunggulan dari unit ini adalah fleksibilitas layanan, harga terjangkau, serta sentuhan lokal yang khas. Selain itu, unit ini menjadi ruang pengembangan kreativitas bagi anak muda desa yang ingin berkarier di bidang multimedia.
-    </p>
-    <p>
-      Potensi keberlanjutan usaha ini sangat tinggi karena kebutuhan konten digital terus meningkat, baik untuk keperluan pribadi maupun promosi usaha. Unit ini berperan penting dalam mengangkat potensi desa melalui media digital dan meningkatkan literasi teknologi di kalangan warga.
-    </p>
+  <main class="container">
+    <h2>Unit Video & Digital Editing</h2>
+    <p>Unit Video & Digital Editing BUMDes Buwana Raharja hadir sebagai bentuk respon terhadap kebutuhan konten visual yang terus meningkat di era digital. Unit ini berfokus pada produksi dan pengolahan video profesional untuk berbagai keperluan, baik individu, UMKM, maupun instansi.</p>
+
+    <p><strong>Konsep:</strong> Melayani jasa video shooting, editing konten digital, pembuatan iklan produk, dokumentasi acara, hingga pembuatan profil desa/UMKM. Semua dilakukan oleh tenaga kreatif lokal dengan peralatan standar industri kreatif.</p>
+
+    <p><strong>Lini Bisnis:</strong> Jasa pembuatan video promosi, video event, reels media sosial, editing podcast/video YouTube, hingga animasi edukatif desa. Unit ini juga menawarkan jasa fotografi dan desain grafis sebagai tambahan layanan kreatif.</p>
+
+    <p><strong>Keunggulan:</strong> Kualitas profesional, biaya kompetitif, fleksibilitas jadwal, dan keterlibatan talenta muda desa dalam industri kreatif. Didukung pelatihan berkala dan kolaborasi dengan komunitas kreatif lokal.</p>
+
+    <p><strong>Manfaat & Peluang:</strong> Meningkatkan visibilitas dan daya saing UMKM, menjadi pusat pengembangan ekonomi kreatif desa, serta membuka lapangan kerja berbasis digital. Potensi kemitraan dengan lembaga pendidikan, pemerintah desa, hingga pengusaha lokal.</p>
   </main>
 
   <footer>
