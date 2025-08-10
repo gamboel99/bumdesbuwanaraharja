@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Program Bulanan - BUMDes Buwana Raharja</title>
+  <title>Program Utama Bulanan - BUMDes Buwana Raharja</title>
   <style>
+    /* (ISI CSS TETAP SAMA seperti yang Anda kirim di atas) */
     * {
       margin: 0;
       padding: 0;
@@ -13,159 +14,217 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
       line-height: 1.6;
-      background-color: #ffffff;
-      color: #000000;
+      color: #333;
     }
 
-    header {
-      background-color: #ffffff;
+    .banner {
+      background: linear-gradient(to right, #0e5cad, #4da1ff);
+      color: white;
+      padding: 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      border-bottom: 4px solid #007BFF;
+      justify-content: space-between;
     }
 
-    header img {
-      height: 60px;
+    .banner h1 {
+      text-align: center;
+      flex: 1;
+      font-size: 24px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
     }
 
     nav {
-      background-color: #007BFF;
+      background-color: #0e5cad;
     }
 
-    nav ul {
+    .navbar {
       list-style: none;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
-    nav ul li {
+    .navbar > li {
       position: relative;
     }
 
-    nav a {
+    .navbar > li > a {
       display: block;
       padding: 15px 20px;
       color: white;
       text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
-    nav ul li:hover > a {
-      background-color: #0056b3;
+    .navbar > li:hover > a {
+      background-color: #0a4b91;
     }
 
-    nav ul ul {
+    .dropdown-content {
       display: none;
       position: absolute;
       background-color: white;
-      border: 1px solid #ccc;
-      top: 50px;
       min-width: 200px;
-      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1;
     }
 
-    nav ul li:hover > ul {
+    .dropdown-content li a {
+      color: #333;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    nav ul ul li {
-      width: 100%;
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    nav ul ul a {
-      color: black;
-      padding: 10px 15px;
+    .container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #0e5cad;
     }
 
-    main {
-      padding: 20px;
+    .container p {
+      margin-bottom: 15px;
+      text-align: justify;
     }
 
     footer {
-      background-color: #007BFF;
+      background-color: #0e5cad;
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
 
     footer p {
       margin: 5px 0;
     }
 
-    hr {
-      margin: 10px 0;
-      border: 1px solid white;
+    footer hr {
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #ffffff33;
     }
 
-    h1 {
-      color: #007BFF;
-      margin-bottom: 15px;
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo_kiri.png" alt="Logo Kiri" />
-    <img src="logo_kanan.png" alt="Logo Kanan" />
+  <header class="banner">
+    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
+    <h1>BUMDes Buwana Raharja</h1>
+    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
   </header>
 
   <nav>
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li>
+    <ul class="navbar">
+      <li class="dropdown">
         <a href="#">Profil</a>
-        <ul>
-          <li><a href="visi_misi.html">Visi & Misi</a></li>
+        <ul class="dropdown-content">
           <li><a href="sejarah.html">Sejarah</a></li>
-          <li><a href="struktur.html">Struktur Organisasi</a></li>
+          <li><a href="visi_misi.html">Visi dan Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
         </ul>
       </li>
-      <li>
+      <li class="dropdown">
         <a href="#">Unit Usaha</a>
-        <ul>
+        <ul class="dropdown-content">
           <li><a href="unit_pertanian.html">Pertanian</a></li>
           <li><a href="unit_peternakan.html">Peternakan</a></li>
           <li><a href="unit_perikanan.html">Perikanan</a></li>
-          <li><a href="unit_perdagangan.html">Perdagangan</a></li>
-          <li><a href="unit_toko.html">Toko Desa</a></li>
-          <li><a href="unit_air.html">Layanan Air Bersih</a></li>
-          <li><a href="unit_sampah.html">Pengelolaan Sampah</a></li>
-          <li><a href="unit_bengkel.html">Bengkel & Servis</a></li>
-          <li><a href="unit_keuangan.html">Jasa Keuangan Mikro</a></li>
-          <li><a href="unit_wisata.html">Wisata Desa</a></li>
-          <li><a href="unit_kuliner.html">Warung Kuliner</a></li>
-          <li><a href="unit_kerajinan.html">Kerajinan Tangan</a></li>
-          <li><a href="unit_digital.html">Keuangan Digital & Web</a></li>
-          <li><a href="unit_video.html">Video Shooting & Editing</a></li>
+          <li><a href="unit_kerajinan.html">Kerajinan / Ekraf</a></li>
+          <li><a href="unit_fintech.html">Fintech</a></li>
+          <li><a href="unit_video.html">Video & Digital Editing</a></li>
+          <li><a href="unit_kuliner.html">Kuliner</a></li>
+          <li><a href="unit_atk.html">Toko ATK</a></li>
+          <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
         </ul>
       </li>
-      <li>
-        <a href="#">Program</a>
-        <ul>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
           <li><a href="program_sosial.html">Program Sosial</a></li>
-          <li><a href="program_bulanan.html">Program Bulanan</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
         </ul>
       </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
       <li><a href="kontak.html">Kontak</a></li>
     </ul>
   </nav>
 
-  <main>
-    <h1>Program Utama Bulanan</h1>
-    <p>Program Utama Bulanan BUMDes Buwana Raharja adalah agenda rutin yang dijalankan untuk memperkuat sinergi antara BUMDes dan masyarakat desa. Program ini mencakup kegiatan sosial, edukatif, hingga promosi produk unit usaha.</p>
+  <main class="container">
+    <h2>Program Utama Bulanan</h2>
+    <p>Program utama bulanan BUMDes Buwana Raharja dirancang sebagai kegiatan rutin yang menggerakkan roda ekonomi desa dan mendorong partisipasi aktif warga. Program ini mencakup sektor sosial, ekonomi, hingga edukatif yang dikemas dalam agenda tetap setiap bulan.</p>
 
-    <p>Beberapa contoh kegiatan bulanan yang rutin dijalankan antara lain:</p>
-    <ul>
-      <li>Pasar Rakyat UMKM BUMDes</li>
-      <li>Pelatihan dan penyuluhan usaha bagi warga</li>
-      <li>Distribusi sembako murah hasil kerjasama unit pertanian dan toko desa</li>
-      <li>Kegiatan kerja bakti dan konservasi lingkungan bersama Unit Sampah dan Air Bersih</li>
-    </ul>
+    <p><strong>Konsep:</strong> Setiap bulan difokuskan pada satu tema utama seperti bulan pertanian, kebersihan, kewirausahaan, atau edukasi digital. Masing-masing tema disertai kegiatan seperti pelatihan, kampanye warga, hingga gelar produk desa.</p>
 
-    <p>Tujuan utama dari program ini adalah memperkuat hubungan dengan masyarakat, menumbuhkan ekonomi lokal, serta membentuk budaya gotong royong dan partisipasi aktif. Program ini juga menjadi sarana promosi dan evaluasi kinerja unit-unit usaha.</p>
+    <p><strong>Jenis Kegiatan:</strong> Bazar UMKM, pelatihan skill kerja, gotong royong bersih desa, lomba desa sehat, workshop teknologi pertanian, hingga kampanye digital branding produk desa.</p>
+
+    <p><strong>Manfaat:</strong> Meningkatkan pendapatan masyarakat, memperkuat jejaring sosial dan ekonomi antarwarga, membangun budaya kolaboratif, serta menciptakan desa yang produktif dan inovatif.</p>
+
+    <p><strong>Peluang:</strong> Menjadi daya tarik CSR, menggandeng sponsor lokal/nasional, serta peluang liputan media yang memperkuat citra desa.</p>
   </main>
 
   <footer>
