@@ -1,144 +1,277 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agenda Bulanan - BUMDes Buwana Raharja</title>
   <style>
+    /* Reset dasar */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
       background-color: #f4f4f4;
+      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
+      line-height: 1.6;
+      color: #333;
     }
-    header {
-      background-color: #004aad;
+
+    .banner {
+      background: linear-gradient(to right, #0e5cad, #4da1ff);
       color: white;
-      padding: 10px 0;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .banner h1 {
       text-align: center;
+      flex: 1;
+      font-size: 24px;
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    nav {
+      background-color: #0e5cad;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar > li {
       position: relative;
     }
-    header img {
-      position: absolute;
-      top: 10px;
-      height: 50px;
-    }
-    header img.left {
-      left: 20px;
-    }
-    header img.right {
-      right: 20px;
-    }
-    nav {
-      background-color: white;
-      padding: 10px;
-      text-align: center;
-      border-bottom: 2px solid #004aad;
-    }
-    nav a {
-      color: #004aad;
+
+    .navbar > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
       text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    main {
-      padding: 20px;
+
+    .navbar > li:hover > a {
+      background-color: #0a4b91;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
       background-color: white;
-      margin: 20px auto;
+      min-width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content li a {
+      color: #333;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .container {
+      padding: 40px 20px;
       max-width: 900px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    h1 {
-      color: #004aad;
+
+    .container h2 {
+      font-size: 28px;
       margin-bottom: 15px;
-      text-align: center;
+      color: #0e5cad;
     }
+
+    .container p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 15px;
-    }
-    table, th, td {
-      border: 1px solid #004aad;
-    }
-    th {
-      background-color: #004aad;
-      color: white;
-      padding: 8px;
-      text-align: center;
-    }
-    td {
-      padding: 8px;
-      text-align: center;
-    }
-    footer {
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      padding: 15px;
       margin-top: 20px;
     }
-    footer a {
-      color: yellow;
-      text-decoration: none;
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0e5cad;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    footer {
+      background-color: #0e5cad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer hr {
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #ffffff33;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo_kiri.png" alt="Logo Kiri" class="left">
+  <header class="banner">
+    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
     <h1>BUMDes Buwana Raharja</h1>
-    <img src="logo_kanan.png" alt="Logo Kanan" class="right">
+    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
   </header>
 
   <nav>
-    <a href="index.html">Beranda</a>
-    <a href="tentang.html">Tentang</a>
-    <a href="unit_usaha.html">Unit Usaha</a>
-    <a href="agenda_bulanan.html">Agenda Bulanan</a>
-    <a href="kontak.html">Kontak</a>
+    <ul class="navbar">
+      <li class="dropdown">
+        <a href="#">Profil</a>
+        <ul class="dropdown-content">
+          <li><a href="sejarah.html">Sejarah</a></li>
+          <li><a href="visi_misi.html">Visi dan Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Unit Usaha</a>
+        <ul class="dropdown-content">
+          <li><a href="unit_pertanian.html">Pertanian</a></li>
+          <li><a href="unit_peternakan.html">Peternakan</a></li>
+          <li><a href="unit_perikanan.html">Perikanan</a></li>
+          <li><a href="unit_kerajinan.html">Kerajinan / Ekraf</a></li>
+          <li><a href="unit_fintech.html">Fintech</a></li>
+          <li><a href="unit_video.html">Video & Digital Editing</a></li>
+          <li><a href="unit_kuliner.html">Kuliner</a></li>
+          <li><a href="unit_atk.html">Toko ATK</a></li>
+          <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
+          <li><a href="program_sosial.html">Program Sosial</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
   </nav>
 
-  <main>
-    <h1>Agenda Bulanan</h1>
-    <p>Berikut adalah jadwal kegiatan bulanan BUMDes Buwana Raharja:</p>
+  <main class="container">
+    <h2>Agenda Bulanan</h2>
+    <p>Berikut adalah daftar agenda kegiatan BUMDes Buwana Raharja untuk bulan ini:</p>
+
     <table>
       <thead>
         <tr>
           <th>Tanggal</th>
-          <th>Agenda</th>
-          <th>Tempat</th>
+          <th>Kegiatan</th>
           <th>Penanggung Jawab</th>
+          <th>Lokasi</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>05 Agustus 2025</td>
-          <td>Rapat Koordinasi Bulanan</td>
+          <td>5 Agustus 2025</td>
+          <td>Pelatihan Budidaya Ikan Lele Sistem Bioflok</td>
+          <td>Unit Perikanan</td>
           <td>Balai Desa</td>
-          <td>Direktur BUMDes</td>
         </tr>
         <tr>
           <td>12 Agustus 2025</td>
-          <td>Pelatihan Pengelolaan Keuangan</td>
-          <td>Aula Kecamatan</td>
-          <td>Sekretaris</td>
+          <td>Pengolahan Hasil Panen Padi</td>
+          <td>Unit Pertanian</td>
+          <td>Gudang BUMDes</td>
         </tr>
         <tr>
-          <td>20 Agustus 2025</td>
-          <td>Bazar Produk Lokal</td>
+          <td>18 Agustus 2025</td>
+          <td>Lomba Kerajinan Tangan UMKM Desa</td>
+          <td>Unit Kerajinan / Ekraf</td>
           <td>Lapangan Desa</td>
-          <td>Kepala Unit Perdagangan</td>
         </tr>
         <tr>
-          <td>27 Agustus 2025</td>
-          <td>Pemeliharaan Sarana Air Bersih</td>
-          <td>Lokasi Sumur Bor</td>
-          <td>Teknisi Air</td>
+          <td>25 Agustus 2025</td>
+          <td>Sosialisasi Bank Sampah</td>
+          <td>Unit Bank Sampah</td>
+          <td>Aula Balai Desa</td>
         </tr>
       </tbody>
     </table>
