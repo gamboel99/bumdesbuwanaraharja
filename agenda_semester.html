@@ -1,154 +1,288 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agenda Semester - BUMDes Buwana Raharja</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset dasar */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    header {
-      background-color: #005baa;
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      background-image: repeating-linear-gradient(45deg, #e5e5e5 0, #e5e5e5 1px, #f4f4f4 1px, #f4f4f4 20px);
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .banner {
+      background: linear-gradient(to right, #0e5cad, #4da1ff);
       color: white;
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
     }
-    header img {
-      height: 50px;
+
+    .banner h1 {
+      text-align: center;
+      flex: 1;
+      font-size: 24px;
     }
+
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+
     nav {
-      background-color: white;
-      padding: 10px 0;
+      background-color: #0e5cad;
     }
-    nav ul {
+
+    .navbar {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      margin: 0;
-      padding: 0;
     }
-    nav ul li {
-      margin: 0 15px;
+
+    .navbar > li {
       position: relative;
     }
-    nav ul li a {
+
+    .navbar > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
       text-decoration: none;
-      color: #005baa;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    main {
-      padding: 20px;
+
+    .navbar > li:hover > a {
+      background-color: #0a4b91;
     }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content li a {
+      color: #333;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #0e5cad;
+    }
+
+    .container p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
     }
-    table, th, td {
-      border: 1px solid #ddd;
-    }
+
     th, td {
-      padding: 10px;
-      text-align: center;
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
     }
+
     th {
-      background-color: #005baa;
+      background-color: #0e5cad;
       color: white;
     }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
     footer {
-      background-color: #005baa;
+      background-color: #0e5cad;
       color: white;
       text-align: center;
-      padding: 10px 0;
-      margin-top: 20px;
+      padding: 20px;
+      margin-top: 40px;
     }
+
+    footer p {
+      margin: 5px 0;
+    }
+
     footer hr {
-      border: 0;
-      border-top: 1px solid white;
-      margin: 10px 0;
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #ffffff33;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="banner">
+    <img src="asset/logo_kanan.png" alt="Logo Kanan" class="logo kanan">
+    <h1>BUMDes Buwana Raharja</h1>
+    <img src="asset/logo_kiri.png" alt="Logo Kiri" class="logo kiri">
+  </header>
 
-<header>
-  <img src="logo_kiri.png" alt="Logo Kiri">
-  <h1>BUMDes Buwana Raharja</h1>
-  <img src="logo_kanan.png" alt="Logo Kanan">
-</header>
+  <nav>
+    <ul class="navbar">
+      <li class="dropdown">
+        <a href="#">Profil</a>
+        <ul class="dropdown-content">
+          <li><a href="sejarah.html">Sejarah</a></li>
+          <li><a href="visi_misi.html">Visi dan Misi</a></li>
+          <li><a href="struktur_organisasi.html">Struktur Organisasi</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Unit Usaha</a>
+        <ul class="dropdown-content">
+          <li><a href="unit_pertanian.html">Pertanian</a></li>
+          <li><a href="unit_peternakan.html">Peternakan</a></li>
+          <li><a href="unit_perikanan.html">Perikanan</a></li>
+          <li><a href="unit_kerajinan.html">Kerajinan / Ekraf</a></li>
+          <li><a href="unit_fintech.html">Fintech</a></li>
+          <li><a href="unit_video.html">Video & Digital Editing</a></li>
+          <li><a href="unit_kuliner.html">Kuliner</a></li>
+          <li><a href="unit_atk.html">Toko ATK</a></li>
+          <li><a href="unit_bank_sampah.html">Bank Sampah</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Program BUMDes</a>
+        <ul class="dropdown-content">
+          <li><a href="program_sosial.html">Program Sosial</a></li>
+          <li><a href="program_bulanan.html">Program Utama Bulanan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Agenda</a>
+        <ul class="dropdown-content">
+          <li><a href="agenda_bulanan.html">Bulanan</a></li>
+          <li><a href="agenda_semester.html">Semester</a></li>
+          <li><a href="agenda_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dokumentasi</a>
+        <ul class="dropdown-content">
+          <li><a href="dokumentasi_bulanan.html">Bulanan</a></li>
+          <li><a href="dokumentasi_semester.html">Semester</a></li>
+          <li><a href="dokumentasi_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Laporan</a>
+        <ul class="dropdown-content">
+          <li><a href="laporan_bulanan.html">Bulanan</a></li>
+          <li><a href="laporan_triwulan.html">Triwulan</a></li>
+          <li><a href="laporan_semester.html">Semester</a></li>
+          <li><a href="laporan_tahunan.html">Tahunan</a></li>
+        </ul>
+      </li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Beranda</a></li>
-    <li><a href="tentang.html">Tentang</a></li>
-    <li><a href="unit_usaha.html">Unit Usaha</a></li>
-    <li><a href="agenda_semester.html">Agenda Semester</a></li>
-    <li><a href="agenda_tahunan.html">Agenda Tahunan</a></li>
-    <li><a href="kontak.html">Kontak</a></li>
-  </ul>
-</nav>
+  <main class="container">
+    <h2>Agenda Semester</h2>
+    <p>Berikut adalah daftar agenda kegiatan BUMDes Buwana Raharja untuk semester ini:</p>
 
-<main>
-  <h2>Agenda Semester BUMDes Buwana Raharja</h2>
-  <p>Berikut adalah agenda kegiatan BUMDes Buwana Raharja selama satu semester:</p>
-  <table>
-    <tr>
-      <th>No</th>
-      <th>Bulan</th>
-      <th>Kegiatan</th>
-      <th>Penanggung Jawab</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Januari</td>
-      <td>Rapat Evaluasi Awal Tahun</td>
-      <td>Direktur BUMDes</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Februari</td>
-      <td>Pelatihan Pengembangan UMKM</td>
-      <td>Manajer Unit Usaha</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Maret</td>
-      <td>Pameran Produk Desa</td>
-      <td>Tim Pemasaran</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>April</td>
-      <td>Peningkatan Infrastruktur Desa</td>
-      <td>Kepala Desa</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Mei</td>
-      <td>Pelatihan Digital Marketing</td>
-      <td>Unit Keuangan Digital</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Juni</td>
-      <td>Rapat Evaluasi Semester</td>
-      <td>Direktur BUMDes</td>
-    </tr>
-  </table>
-</main>
+    <table>
+      <thead>
+        <tr>
+          <th>Bulan</th>
+          <th>Kegiatan</th>
+          <th>Penanggung Jawab</th>
+          <th>Lokasi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Januari</td>
+          <td>Rapat Awal Tahun dan Perencanaan Program</td>
+          <td>Manajemen BUMDes</td>
+          <td>Aula Balai Desa</td>
+        </tr>
+        <tr>
+          <td>Maret</td>
+          <td>Pelatihan Pengelolaan Keuangan UMKM</td>
+          <td>Unit Fintech</td>
+          <td>Balai Desa</td>
+        </tr>
+        <tr>
+          <td>Mei</td>
+          <td>Pameran Produk Unggulan Desa</td>
+          <td>Unit Kerajinan / Ekraf</td>
+          <td>Lapangan Desa</td>
+        </tr>
+        <tr>
+          <td>Juni</td>
+          <td>Panen Raya dan Festival Kuliner Desa</td>
+          <td>Unit Pertanian & Unit Kuliner</td>
+          <td>Lapangan Utama</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 
-<footer>
-  <p>Alamat: Jl. Raya Keling, Bukaan, Keling, Kec. Kepung, Kabupaten Kediri, Jawa Timur 64293</p>
-  <p>Email: bumdesbuwana@example.com | Website: www.bumdesbuwanaraharja.desa.id</p>
-  <p>Follow us: Instagram | Facebook | YouTube</p>
-  <hr>
-  <p>Developed by <strong>CV. Mitra Utama Consultindo</strong></p>
-</footer>
-
+  <footer>
+    <p>Alamat: Jl. Raya Keling, Bukaan, Keling, Kec. Kepung, Kabupaten Kediri, Jawa Timur 64293</p>
+    <p>Email: bumdesbuwana@example.com | Website: www.bumdesbuwanaraharja.desa.id</p>
+    <p>Follow us: Instagram | Facebook | YouTube</p>
+    <hr>
+    <p>Developed by <strong>CV. Mitra Utama Consultindo</strong></p>
+  </footer>
 </body>
 </html>
